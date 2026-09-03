@@ -1,0 +1,8 @@
+{
+  "name": "ARK Hacks",
+  "install": "cd arkhacks && npm install",
+  "start": "cd arkhacks && npm run dev -- --host 0.0.0.0 --port 4321",
+  "ports": [
+    { "name": "dev", "port": 4321 }
+  ]
+}
