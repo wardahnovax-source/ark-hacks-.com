@@ -1,5 +1,5 @@
 ---
-import { tarkovImages } from '../data/tarkov';
+import { arkImages } from '../data/ark';
 import { getUi } from '../data/i18n';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { productInfo, siteConfig } from '../data/site';
@@ -25,7 +25,7 @@ const productAlts = [
 	ui.images.cheatsPackage,
 ] as const;
 
-const mainImage = tarkovImages.product[0];
+const mainImage = arkImages.product[0];
 const mainAlt = productAlts[0] ?? mainImage.alt;
 const monthlyPlan = productInfo.plans.find((plan) => plan.id === 'monthly') ?? productInfo.plans[0];
 ---

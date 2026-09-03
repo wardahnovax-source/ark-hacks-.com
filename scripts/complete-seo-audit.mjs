@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Completes escape-from-tarkov-cheats SEO audit: add missing pages, fix leftovers, strip Zadeyo from meta.
+ * Completes escape-from-ark-hacks SEO audit: add missing pages, fix leftovers, strip Zadeyo from meta.
  * Run: node scripts/complete-seo-audit.mjs
  */
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
@@ -11,52 +11,52 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NODE = 'C:\\Program Files\\nodejs\\node.exe';
 
 const EXTRA_PAGES = [
-	{ id: 'hacks', dir: 'tarkov-cheats', pageId: 'hacks' },
-	{ id: 'cheat-download', dir: 'tarkov-cheat-download', pageId: 'cheat-download' },
-	{ id: 'mod-menu', dir: 'tarkov-mod-menu', pageId: 'mod-menu' },
-	{ id: 'soft-aim', dir: 'tarkov-soft-aim', pageId: 'soft-aim' },
-	{ id: 'best-cheats', dir: 'best-tarkov-cheats', pageId: 'best-cheats' },
-	{ id: 'aimbot-hack', dir: 'tarkov-aimbot-hack', pageId: 'aimbot-hack' },
-	{ id: 'esp-hack', dir: 'tarkov-esp-hack', pageId: 'esp-hack' },
-	{ id: 'unlock-all', dir: 'tarkov-unlock-all', pageId: 'unlock-all' },
+	{ id: 'hacks', dir: 'ark-hacks', pageId: 'hacks' },
+	{ id: 'cheat-download', dir: 'ark-cheat-download', pageId: 'cheat-download' },
+	{ id: 'mod-menu', dir: 'ark-mod-menu', pageId: 'mod-menu' },
+	{ id: 'soft-aim', dir: 'ark-soft-aim', pageId: 'soft-aim' },
+	{ id: 'best-cheats', dir: 'best-ark-hacks', pageId: 'best-cheats' },
+	{ id: 'aimbot-hack', dir: 'ark-aimbot-hack', pageId: 'aimbot-hack' },
+	{ id: 'esp-hack', dir: 'ark-esp-hack', pageId: 'esp-hack' },
+	{ id: 'unlock-all', dir: 'ark-unlock-all', pageId: 'unlock-all' },
 ];
 
 const GLOBAL_REPLACEMENTS = [
-	[/tarkov-tarkov/g, 'tarkov'],
-	[/battleye-bypass-tarkov/g, 'battleye-bypass'],
-	[/Escape from Tarkov/g, 'Escape from Tarkov'],
-	[/Escape from Tarkov/g, 'Escape from Tarkov'],
-	[/Call of Duty/g, 'Escape from Tarkov'],
-	[/Tarkov Wallhack/g, 'Escape from Tarkov Wallhack'],
-	[/Tarkov Radar Hack/g, 'Escape from Tarkov Radar Hack'],
-	[/Tarkov Cheat Features/g, 'Escape from Tarkov Cheat Features'],
-	[/Tarkov Cheat Pricing/g, 'Escape from Tarkov Cheat Pricing'],
-	[/Tarkov Cheat Setup/g, 'Escape from Tarkov Cheat Setup'],
-	[/Tarkov Cheat Status/g, 'Escape from Tarkov Cheat Status'],
-	[/Tarkov Cheat Support/g, 'Escape from Tarkov Cheat Support'],
-	[/Tarkov squad fight/g, 'Escape from Tarkov squad fight'],
-	[/Tarkov squad builder/g, 'Escape from Tarkov loadout builder'],
-	[/Tarkov store header/g, 'Escape from Tarkov header'],
-	[/Tarkov wasteland combat/g, 'Escape from Tarkov battle royale combat'],
-	[/Tarkov loadout builder/g, 'Escape from Tarkov loadout builder'],
-	[/Tarkov pricing/g, 'Escape from Tarkov pricing'],
-	[/Tarkov BattlEye anti-cheat/g, 'Escape from Tarkov BattlEye anti-cheat'],
-	[/on Tarkov/g, 'on Escape from Tarkov'],
-	[/for Tarkov/g, 'for Escape from Tarkov'],
-	[/Tarkov guides/g, 'Escape from Tarkov guides'],
-	[/Tarkov guide/g, 'Escape from Tarkov guide'],
-	[/Tarkov hileleri/g, 'Escape from Tarkov hileleri'],
-	[/Tarkov hile/g, 'Escape from Tarkov hile'],
-	[/Tarkov hileleri/g, 'Escape from Tarkov hileleri'],
-	[/cheatów Tarkov/g, 'cheatów Escape from Tarkov'],
-	[/cheat Tarkov/g, 'cheat Escape from Tarkov'],
-	[/cheats Tarkov/g, 'cheats Escape from Tarkov'],
-	[/trucos Tarkov/g, 'trucos Escape from Tarkov'],
-	[/triche Tarkov/g, 'triche Escape from Tarkov'],
-	[/trucchi Tarkov/g, 'trucchi Escape from Tarkov'],
-	[/Wallhack Tarkov/g, 'Escape from Tarkov Wallhack'],
-	[/cheat Tarkov undetected/g, 'cheat Escape from Tarkov undetected'],
-	[/cheats Tarkov undetected/g, 'cheats Escape from Tarkov undetected'],
+	[/ark-ark/g, 'ark'],
+	[/eac-bypass-ark/g, 'eac-bypass'],
+	[/ARK: Survival Ascended/g, 'ARK: Survival Ascended'],
+	[/ARK: Survival Ascended/g, 'ARK: Survival Ascended'],
+	[/Call of Duty/g, 'ARK: Survival Ascended'],
+	[/ARK Wallhack/g, 'ARK: Survival Ascended Wallhack'],
+	[/ARK Radar Hack/g, 'ARK: Survival Ascended Radar Hack'],
+	[/ARK Cheat Features/g, 'ARK: Survival Ascended Cheat Features'],
+	[/ARK Cheat Pricing/g, 'ARK: Survival Ascended Cheat Pricing'],
+	[/ARK Cheat Setup/g, 'ARK: Survival Ascended Cheat Setup'],
+	[/ARK Cheat Status/g, 'ARK: Survival Ascended Cheat Status'],
+	[/ARK Cheat Support/g, 'ARK: Survival Ascended Cheat Support'],
+	[/ARK squad fight/g, 'ARK: Survival Ascended squad fight'],
+	[/ARK squad builder/g, 'ARK: Survival Ascended loadout builder'],
+	[/ARK store header/g, 'ARK: Survival Ascended header'],
+	[/ARK wasteland combat/g, 'ARK: Survival Ascended battle royale combat'],
+	[/ARK loadout builder/g, 'ARK: Survival Ascended loadout builder'],
+	[/ARK pricing/g, 'ARK: Survival Ascended pricing'],
+	[/ARK Easy Anti-Cheat/g, 'ARK: Survival Ascended Easy Anti-Cheat'],
+	[/on ARK/g, 'on ARK: Survival Ascended'],
+	[/for ARK/g, 'for ARK: Survival Ascended'],
+	[/ARK guides/g, 'ARK: Survival Ascended guides'],
+	[/ARK guide/g, 'ARK: Survival Ascended guide'],
+	[/ARK hileleri/g, 'ARK: Survival Ascended hileleri'],
+	[/ARK hile/g, 'ARK: Survival Ascended hile'],
+	[/ARK hileleri/g, 'ARK: Survival Ascended hileleri'],
+	[/cheatów ARK/g, 'cheatów ARK: Survival Ascended'],
+	[/cheat ARK/g, 'cheat ARK: Survival Ascended'],
+	[/cheats ARK/g, 'cheats ARK: Survival Ascended'],
+	[/trucos ARK/g, 'trucos ARK: Survival Ascended'],
+	[/triche ARK/g, 'triche ARK: Survival Ascended'],
+	[/trucchi ARK/g, 'trucchi ARK: Survival Ascended'],
+	[/Wallhack ARK/g, 'ARK: Survival Ascended Wallhack'],
+	[/cheat ARK undetected/g, 'cheat ARK: Survival Ascended undetected'],
+	[/cheats ARK undetected/g, 'cheats ARK: Survival Ascended undetected'],
 	[/Verdansk beams/g, 'long-range AR beams'],
 	[/scav-run room clears/g, 'close-quarters room clears'],
 	[/Verdansk and Urzikstan/g, 'Verdansk and scav-run'],
@@ -68,13 +68,13 @@ const GLOBAL_REPLACEMENTS = [
 	[/Activision security/g, 'Epic Games security'],
 	[/Activision bans/g, 'Epic Games bans'],
 	[/Activision/g, 'Epic Games'],
-	[/battleye/gi, 'battleye'],
-	[/BattlEye/g, 'BattlEye anti-cheat'],
-	[/escape-from-tarkov-cheats/g, 'escape-from-tarkov-cheats'],
-	[/escape-from-tarkov/g, 'tarkov'],
-	[/Undetected Wallhack for Call of Duty/g, 'Undetected Wallhack for Escape from Tarkov'],
+	[/eac/gi, 'eac'],
+	[/Easy Anti-Cheat/g, 'Easy Anti-Cheat'],
+	[/escape-from-ark-hacks/g, 'escape-from-ark-hacks'],
+	[/escape-from-ark/g, 'ark'],
+	[/Undetected Wallhack for Call of Duty/g, 'Undetected Wallhack for ARK: Survival Ascended'],
 	[/How ESP wallhack, radar, and Aimbot rebuild after Call of Duty anti-cheat/g,
-		'How ESP wallhack, radar, and Aimbot rebuild after Escape from Tarkov anti-cheat'],
+		'How ESP wallhack, radar, and Aimbot rebuild after ARK: Survival Ascended anti-cheat'],
 ];
 
 /** Remove Zadeyo from meta description/title strings only */
@@ -90,7 +90,7 @@ function stripZadeyoFromMeta(text) {
 		.replace(/\s*Zadeyo delivery\.?/gi, 'instant digital delivery.')
 		.replace(/\s*and Zadeyo delivery\.?/gi, ' and instant digital delivery.')
 		.replace(/\|\s*Instant Zadeyo Delivery/g, '| Instant Digital Delivery')
-		.replace(/Buy on Zadeyo/g, 'Buy Tarkov Cheats')
+		.replace(/Buy on Zadeyo/g, 'Buy ARK Hacks')
 		.replace(/\s{2,}/g, ' ')
 		.trim();
 }
@@ -169,38 +169,38 @@ import LocalizedPage from '../../components/LocalizedPage.astro';
 async function fixLocalesBlogUi() {
 	const file = path.join(ROOT, 'src', 'data', 'i18n', 'locales.ts');
 	let content = await readFile(file, 'utf8');
-	content = content.replace(/Tarkov guides/g, 'Escape from Tarkov guides');
-	content = content.replace(/Tarkov guide/g, 'Escape from Tarkov guide');
-	content = content.replace(/Tarkov hileleri/g, 'Escape from Tarkov hileleri');
-	content = content.replace(/Tarkov hile/g, 'Escape from Tarkov hile');
-	content = content.replace(/cheat Tarkov/g, 'cheat Escape from Tarkov');
-	content = content.replace(/cheats Tarkov/g, 'cheats Escape from Tarkov');
-	content = content.replace(/trucos Tarkov/g, 'trucos Escape from Tarkov');
-	content = content.replace(/triche Tarkov/g, 'triche Escape from Tarkov');
-	content = content.replace(/trucchi Tarkov/g, 'trucchi Escape from Tarkov');
-	content = content.replace(/cheatów Tarkov/g, 'cheatów Escape from Tarkov');
-	content = content.replace(/читов Tarkov/g, 'читов Escape from Tarkov');
-	content = content.replace(/читів Tarkov/g, 'читів Escape from Tarkov');
-	content = content.replace(/Tarkovチート/g, 'Escape from Tarkovチート');
-	content = content.replace(/Tarkov 치트/g, 'Escape from Tarkov 치트');
-	content = content.replace(/Tarkov作弊/g, 'Escape from Tarkov作弊');
-	content = content.replace(/Tarkov rehberleri/g, 'Escape from Tarkov rehberleri');
-	content = content.replace(/Tarkov gidsen/g, 'Escape from Tarkov gidsen');
-	content = content.replace(/Tarkov průvodce/g, 'Escape from Tarkov průvodce');
-	content = content.replace(/Tarkov guider/g, 'Escape from Tarkov guider');
-	content = content.replace(/Tarkov related/g, 'Escape from Tarkov related');
-	content = content.replace(/Tarkov ガイド/g, 'Escape from Tarkov ガイド');
-	content = content.replace(/Tarkov 가이드/g, 'Escape from Tarkov 가이드');
-	content = content.replace(/Tarkov指南/g, 'Escape from Tarkov指南');
-	content = content.replace(/Tarkov गाइड/g, 'Escape from Tarkov गाइड');
-	content = content.replace(/Tarkov panduan/g, 'Escape from Tarkov panduan');
-	content = content.replace(/Tarkov คู่มือ/g, 'Escape from Tarkov คู่มือ');
-	content = content.replace(/Tarkov hướng dẫn/g, 'Escape from Tarkov hướng dẫn');
+	content = content.replace(/ARK guides/g, 'ARK: Survival Ascended guides');
+	content = content.replace(/ARK guide/g, 'ARK: Survival Ascended guide');
+	content = content.replace(/ARK hileleri/g, 'ARK: Survival Ascended hileleri');
+	content = content.replace(/ARK hile/g, 'ARK: Survival Ascended hile');
+	content = content.replace(/cheat ARK/g, 'cheat ARK: Survival Ascended');
+	content = content.replace(/cheats ARK/g, 'cheats ARK: Survival Ascended');
+	content = content.replace(/trucos ARK/g, 'trucos ARK: Survival Ascended');
+	content = content.replace(/triche ARK/g, 'triche ARK: Survival Ascended');
+	content = content.replace(/trucchi ARK/g, 'trucchi ARK: Survival Ascended');
+	content = content.replace(/cheatów ARK/g, 'cheatów ARK: Survival Ascended');
+	content = content.replace(/читов ARK/g, 'читов ARK: Survival Ascended');
+	content = content.replace(/читів ARK/g, 'читів ARK: Survival Ascended');
+	content = content.replace(/ARKチート/g, 'ARK: Survival Ascendedチート');
+	content = content.replace(/ARK 치트/g, 'ARK: Survival Ascended 치트');
+	content = content.replace(/ARK作弊/g, 'ARK: Survival Ascended作弊');
+	content = content.replace(/ARK rehberleri/g, 'ARK: Survival Ascended rehberleri');
+	content = content.replace(/ARK gidsen/g, 'ARK: Survival Ascended gidsen');
+	content = content.replace(/ARK průvodce/g, 'ARK: Survival Ascended průvodce');
+	content = content.replace(/ARK guider/g, 'ARK: Survival Ascended guider');
+	content = content.replace(/ARK related/g, 'ARK: Survival Ascended related');
+	content = content.replace(/ARK ガイド/g, 'ARK: Survival Ascended ガイド');
+	content = content.replace(/ARK 가이드/g, 'ARK: Survival Ascended 가이드');
+	content = content.replace(/ARK指南/g, 'ARK: Survival Ascended指南');
+	content = content.replace(/ARK गाइड/g, 'ARK: Survival Ascended गाइड');
+	content = content.replace(/ARK panduan/g, 'ARK: Survival Ascended panduan');
+	content = content.replace(/ARK คู่มือ/g, 'ARK: Survival Ascended คู่มือ');
+	content = content.replace(/ARK hướng dẫn/g, 'ARK: Survival Ascended hướng dẫn');
 	await writeFile(file, content, 'utf8');
 	console.log('Fixed locales.ts blogUi');
 }
 
-console.log('=== Tarkov Cheats SEO completion ===\n');
+console.log('=== ARK Hacks SEO completion ===\n');
 await applyGlobalFixes();
 await createExtraPages();
 await fixLocalesBlogUi();

@@ -5,28 +5,28 @@
  */
 export const brand = {
 	/** Public brand name (nav, footer, H1 hero, schema Organization) */
-	name: 'Tarkov Cheats',
+	name: 'ARK Hacks',
 	/** Short product label if needed */
-	shortName: 'Tarkov',
+	shortName: 'ARK',
 	/** Canonical origin — no trailing slash */
-	url: 'https://tarkovcheats.org',
+	url: 'https://arkhacks.com',
 	locale: 'en',
 	market: 'Worldwide',
-	supportEmail: 'support@tarkovcheats.org',
-	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fescape-from-tarkov',
+	supportEmail: 'support@arkhacks.com',
+	checkoutUrl: 'https://zadeyo.com/go/WARDAH?to=%2Fproducts%2Fark-ascended',
 
 	/** Game this template instance targets */
-	game: 'Escape from Tarkov',
+	game: 'ARK: Survival Ascended',
 	/** Anti-cheat name used in Status / FAQ copy */
-	antiCheat: 'BattlEye',
+	antiCheat: 'Easy Anti-Cheat',
 
-	logo: '/images/tarkov-cheats-logo.webp',
-	logoRaster: '/images/tarkov-cheats-logo.png',
+	logo: '/images/ark-hacks-logo.webp',
+	logoRaster: '/images/ark-hacks-logo.png',
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
-	logoAlt: 'Tarkov Cheats logo',
-	defaultOgImage: '/images/tarkov-cheats-hero-1024w.webp',
-	heroImage: '/images/tarkov-cheats-hero-1024w.webp',
+	logoAlt: 'ARK Hacks logo',
+	defaultOgImage: '/images/ark-hacks-hero-1024w.webp',
+	heroImage: '/images/ark-hacks-hero-1024w.webp',
 
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },
@@ -36,147 +36,140 @@ export const brand = {
 	platforms: ['Windows PC'] as const,
 
 	/**
-	 * Site color tones — accent + canvas + soft/deep/hover/panel.
-	 * Edit in Brand Studio → Colors (tones are fully customizable).
+	 * Site color tones — jungle green canvas + obelisk cyan accent (matches hero art).
 	 */
 	theme: {
-		accent: '#5311ee',
-		bg: '#0a0811',
-		soft: '#c3aef4',
-		deep: '#4907df',
-		hover: '#a07bf4',
-		panel: '#0a080c',
+		accent: '#22d3ee',
+		bg: '#0a1210',
+		soft: '#7dd3fc',
+		deep: '#0891b2',
+		hover: '#38bdf8',
+		panel: '#0c1614',
 	},
 
-	/**
-	 * Keyword system — primary drives titles; list feeds schema / light targeting.
-	 * Keep 5–8 terms.
-	 */
 	keywords: {
-		primary: 'tarkov cheats',
+		primary: 'ark ascended hacks',
 		list: [
-			'tarkov cheats',
-			'escape from tarkov cheats',
-			'tarkov esp',
-			'tarkov aimbot',
-			'tarkov wallhack',
-			'tarkov hacks',
-			'undetected tarkov cheats',
-			'best tarkov cheats',
+			'ark ascended hacks',
+			'ARK hacks',
+			'ARK cheat',
+			'ARK hack',
+			'ARK cheats PC',
+			'ARK hacks PC',
+			'ARK cheat software',
+			'ARK cheat menu',
+			'ARK aimbot',
+			'ARK ESP',
+			'ARK dino ESP',
+			'ARK player ESP',
+			'ARK no recoil',
+			'ARK loot ESP',
+			'best ARK cheats',
+			'best ARK hacks',
+			'ARK cheats 2026',
+			'ARK hacks 2026',
+			'ARK undetected cheats',
+			'ARK cheat download',
 		] as const,
 	},
 
-	/**
-	 * Editable SEO meta — tokens: {brand} {game} {antiCheat} {email} {primaryKeyword}
-	 * Aim ~50–60 chars titles, ~140–160 chars descriptions.
-	 */
 	seo: {
-		/** Titles ≤60 chars; descriptions ~140–160 (Google SERP display). */
-		/** Home = brand hub. Money URL /tarkov-cheats/ owns the head term. */
-		homeTitle: 'Tarkov Cheats | Official Windows PC Site',
+		homeTitle: 'ARK Hacks | Undetected ARK Ascended Cheats PC',
 		homeDescription:
-			'Official Tarkov Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
+			'ARK ascended hacks for Windows PC — aimbot, player ESP, dino ESP, loot ESP, and EAC maintenance. Compare plans and buy ARK hacks with instant delivery.',
 		featuresTitle: '{game} Features | {brand}',
 		featuresDescription:
-			'Everything in one {game} license for Windows PC — ESP, soft aim, radar, loot tools, and patch updates after {antiCheat}. See what is included.',
+			'Full ARK cheat feature list — aimbot, player ESP, dino ESP, loot ESP, no recoil, FOV changer, and EAC patch updates for Windows PC.',
 		storeTitle: '{game} Store | {brand}',
 		storeDescription:
-			'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after payment checkout.',
+			'Monthly and lifetime ARK hacks plans for Windows PC. Same aimbot, ESP, and combat features on both. Instant delivery after checkout.',
 		statusTitle: '{game} Status | {brand}',
 		statusDescription:
-			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue a raid on Windows PC today.',
-		/** Money page meta — primary target for "tarkov cheats". */
-		previewTitle: 'Tarkov Cheats | Undetected ESP & Aimbot',
+			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you join a server on Windows PC.',
+		previewTitle: 'ARK Ascended Hacks | ESP, Aimbot & Dino ESP',
 		previewDescription:
-			'Buy undetected tarkov cheats for Escape from Tarkov on Windows PC. ESP, soft aim, radar, and BattlEye patch updates in one license with instant delivery.',
+			'Buy undetected ARK ascended hacks for Windows PC. Aimbot, player ESP, dino ESP, loot ESP, and EAC updates in one license with instant delivery.',
 		setupTitle: '{game} Setup | {brand}',
 		setupDescription:
-			'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can raid faster. Follow each step in order before your first match.',
+			'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can play faster. Follow each step before your first session.',
 		supportTitle: '{game} Support | {brand}',
 		supportDescription:
 			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
 		faqTitle: '{game} FAQ | {brand}',
 		faqDescription:
-			'Short answers about {brand} for Escape from Tarkov — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy.',
+			'Short answers about {brand} for ARK: Survival Ascended — delivery, setup, {antiCheat} updates, refunds, and Windows PC notes before you buy.',
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
 		reviewsDescription:
-			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Escape from Tarkov on Windows PC. Real feedback from license holders.',
+			'Buyer reviews for {brand} — aimbot, ESP, dino ESP, and patch updates for ARK: Survival Ascended on Windows PC. Real feedback from license holders.',
 		blogTitle: '{game} Intel | {brand}',
 		blogDescription:
-			'Guides and notes for {game} — raid tips, ESP, aimbot, loot routes, and {antiCheat} update coverage for Windows PC players who raid.',
+			'Guides and notes for {game} — dino taming tips, ESP, aimbot, loot routes, and {antiCheat} update coverage for Windows PC players.',
 	},
 
-	/** On-page marketing copy (tokens allowed) */
 	copy: {
-		tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
+		tagline: 'Undetected {primaryKeyword} — aimbot, ESP, and dino filters for PC',
 		summary:
-			'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
-		heroLede: 'Undetected ESP, soft aim, and radar for Escape from Tarkov on Windows PC.',
-		blogLabel: 'Tarkov Intel',
-		ctaBuy: 'Get Access',
+			'{brand} is an undetected {game} cheat package for Windows PC. Includes aimbot, player ESP, dino ESP, loot ESP, and combat tools with {antiCheat} maintenance after patches.',
+		heroLede: 'Hacks and cheats available — 0% detection.',
+		blogLabel: 'ARK Intel',
+		ctaBuy: 'Buy now',
 		ctaBuyShort: 'Buy',
 		featuresIntro: 'Everything included in one license for {game} on Windows PC.',
 		storeIntro: 'Pick a plan. Same features on both. Instant delivery after payment.',
-		statusIntro: 'Check here after a {game} or {antiCheat} patch before you raid.',
+		statusIntro: 'Check here after a {game} or {antiCheat} patch before you play.',
 		previewIntro:
-			'{brand} for Escape from Tarkov — ESP wallhack, soft aim, 2D radar, and BattlEye rebuilds after patches.',
+			'{brand} for ARK: Survival Ascended — aimbot, player ESP, dino ESP, loot ESP, and EAC rebuilds after patches.',
 		setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
 		supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
 		faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
-		reviewsIntro: 'Feedback from {brand} buyers — ESP, soft aim, radar, and support.',
-		chipEsp: 'ESP / wallhack',
-		chipAim: 'Soft aim',
-		chipRadar: '2D radar',
+		reviewsIntro: 'Feedback from {brand} buyers — aimbot, ESP, dino ESP, and support.',
+		chipEsp: 'Player & Dino ESP',
+		chipAim: 'Aimbot',
+		chipRadar: 'Loot ESP',
 		chipUpdates: 'Patch updates',
-		navPreview: 'Cheats',
+		navPreview: 'Hacks',
 		navFeatures: 'Features',
 		navStore: 'Store',
 		navStatus: 'Status',
 		navReviews: 'Reviews',
 	},
 
-	/**
-	 * Sitemap labels — XML is generated at build/dev from routes + these strings.
-	 * Domain comes from `url` (also written to robots.txt via sync:brand).
-	 * Tokens: {brand} {game} {antiCheat} {email} {primaryKeyword}
-	 */
 	sitemap: {
-		/** YYYY-MM-DD — Brand Studio can bump this on save to refresh crawl dates */
-		contentLastmod: '2026-08-13',
+		contentLastmod: '2026-09-03',
 		blogImageTitle: '{brand} blog',
 		blogImageCaption: 'Tips and updates for {primaryKeyword}',
 		reviewsImageTitle: '{brand} reviews',
 		reviewsImageCaption: 'What buyers say about {primaryKeyword}',
 		images: [
 			{
-				src: '/images/tarkov-cheats-esp.webp',
-				title: 'ESP overlay in Escape from Tarkov',
-				caption: 'Player ESP boxes and distance readouts during a raid',
+				src: '/images/ark-hacks-esp.webp',
+				title: 'Player ESP overlay in ARK: Survival Ascended',
+				caption: 'Player ESP boxes, level readouts, and distance markers',
 			},
 			{
-				src: '/images/tarkov-cheats-wallhack.webp',
-				title: 'Wallhack visibility for Tarkov raids',
-				caption: 'PMC and Scav outlines through walls and terrain',
+				src: '/images/ark-hacks-wallhack.webp',
+				title: 'Dino ESP and skeleton wallhack for ARK',
+				caption: 'Dino outlines, health bars, and skeleton ESP through terrain',
 			},
 			{
-				src: '/images/tarkov-cheats-aimbot.webp',
-				title: 'Soft aim assist for Tarkov',
-				caption: 'Configurable soft aim FOV and bone priority',
+				src: '/images/ark-hacks-aimbot.webp',
+				title: 'Aimbot and combat tools for ARK',
+				caption: 'Aimbot, no recoil, and rapid fire controls',
 			},
 			{
-				src: '/images/tarkov-cheats-aimbot-view.webp',
-				title: 'Aimbot view in Tarkov Cheats',
-				caption: 'In-menu aimbot controls for Windows PC',
+				src: '/images/ark-hacks-aimbot-view.webp',
+				title: 'ARK cheat menu screenshot',
+				caption: 'In-menu aimbot and ESP settings for Windows PC',
 			},
 			{
-				src: '/images/tarkov-cheats-radar.webp',
-				title: '2D radar threat overlay',
-				caption: 'Radar cues for flanks near extracts',
+				src: '/images/ark-hacks-radar.webp',
+				title: 'Loot and supply crate ESP',
+				caption: 'Item ESP, loot ESP, and supply crate markers',
 			},
 			{
-				src: '/images/tarkov-cheats-raid.webp',
-				title: 'Tarkov Cheats license plans',
-				caption: 'Monthly and lifetime plans for Windows PC',
+				src: '/images/ark-hacks-raid.webp',
+				title: 'ARK Hacks license plans',
+				caption: 'Monthly and lifetime ARK ascended hacks for Windows PC',
 			},
 		],
 	},

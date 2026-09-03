@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getUi } from '../data/i18n';
 import { getLocalizedPath, resolvePageContextFromPath, type PageId } from '../data/i18n/routing';
-import { tarkovImages } from '../data/tarkov';
+import { arkImages } from '../data/ark';
 import {
 	heroPreloadSrc,
 	heroSizes,
@@ -47,9 +47,9 @@ const {
 	heading,
 	intro,
 	eyebrow,
-	heroImage = tarkovImages.hero,
+	heroImage = arkImages.hero,
 	heroAlt,
-	gallery = tarkovImages.product.slice(0, 3),
+	gallery = arkImages.product.slice(0, 3),
 	galleryTitle,
 	ctaPrimary,
 	ctaSecondary,
@@ -64,7 +64,7 @@ const t = getT(locale);
 const resolvedHeroAlt =
 	(heroAlt && heroAlt.trim()) ||
 	t('images.hero') ||
-	`${siteConfig.name} — Escape from Tarkov ESP and aimbot`;
+	`${siteConfig.name} — ARK: Survival Ascended ESP and aimbot`;
 const resolvedGalleryTitle = galleryTitle ?? t('common.inGameLook');
 
 function resolvePageId(path: string): PageId | undefined {
@@ -92,9 +92,9 @@ const breadcrumbs = [
 ];
 
 const useHomeHero =
-	heroImage === tarkovImages.hero ||
+	heroImage === arkImages.hero ||
 	heroImage === siteConfig.defaultOgImage ||
-	heroImage.includes('tarkov-cheats-hero');
+	heroImage.includes('ark-hacks-hero');
 ---
 
 <Layout

@@ -4,42 +4,42 @@ import sharp from 'sharp';
 
 const CDN_A = 'https://sm.ign.com/t/ign_za/photo/default';
 const CDN_B = 'https://sm.ign.com/t/ign_latam/photo/default';
-const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/tarkov-g';
+const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/ark-g';
 const imagesDir = path.resolve('public/images');
 const publicDir = path.resolve('public');
 
 /**
- * Escape from Tarkov gallery shots — filenames include primary SEO keywords
- * (tarkov, cheats, esp, aimbot, wallhack, battle-royale, etc.)
+ * ARK: Survival Ascended gallery shots — filenames include primary SEO keywords
+ * (ark, cheats, esp, aimbot, wallhack, battle-royale, etc.)
  */
 const KEYWORD_ASSETS = [
-	{ file: 'escape-from-tarkov-cheats-hero.webp', url: `${CDN_GALLERY}/tarkov-gameplay-screenshots-2024_s2qs.1400.jpg` },
-	{ file: 'escape-from-tarkov-cheats-cover.webp', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg` },
-	{ file: 'tarkov-loadout-builder.webp', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
-	{ file: 'escape-from-tarkov-cheats-aimbot-combat.webp', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
-	{ file: 'tarkov-squad-fight.webp', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg` },
-	{ file: 'escape-from-tarkov-cheats-esp-wallhack.webp', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
-	{ file: 'escape-from-tarkov-cheats-package.webp', url: 'https://sm.ign.com/t/ign_latam/gallery/f/tarkov-c/tarkov-chapter-5-underground-images_5h3j.1400.jpg' },
-	{ file: 'tarkov-header-art.webp', url: 'https://sm.ign.com/t/ign_in/screenshot/default/tarkov-unreal-engine-5-1-scree-3_bcxh.1400.jpg' },
-	{ file: 'tarkov-battle-royale-combat.webp', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
-	{ file: 'tarkov-reboot-van-fight.webp', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
-	{ file: 'tarkov-player-esp.webp', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
-	{ file: 'tarkov-zero-build-combat.webp', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
-	{ file: 'tarkov-zero-build-mode.webp', url: `${CDN_A}/screenshot-6380-1725916496012_gj96.1400.jpg` },
-	{ file: 'tarkov-al-mazrah-map.webp', url: 'https://sm.ign.com/t/ign_latam/gallery/f/tarkov-c/tarkov-chapter-5-underground-images_5h3j.1400.jpg' },
+	{ file: 'escape-from-ark-hacks-hero.webp', url: `${CDN_GALLERY}/ark-gameplay-screenshots-2024_s2qs.1400.jpg` },
+	{ file: 'escape-from-ark-hacks-cover.webp', url: `${CDN_B}/ark-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg` },
+	{ file: 'ark-loadout-builder.webp', url: `${CDN_B}/ark-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
+	{ file: 'escape-from-ark-hacks-aimbot-combat.webp', url: `${CDN_B}/ark-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
+	{ file: 'ark-squad-fight.webp', url: `${CDN_B}/ark-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg` },
+	{ file: 'escape-from-ark-hacks-esp-wallhack.webp', url: `${CDN_B}/ark-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
+	{ file: 'escape-from-ark-hacks-package.webp', url: 'https://sm.ign.com/t/ign_latam/gallery/f/ark-c/ark-chapter-5-underground-images_5h3j.1400.jpg' },
+	{ file: 'ark-header-art.webp', url: 'https://sm.ign.com/t/ign_in/screenshot/default/ark-unreal-engine-5-1-scree-3_bcxh.1400.jpg' },
+	{ file: 'ark-battle-royale-combat.webp', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
+	{ file: 'ark-reboot-van-fight.webp', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
+	{ file: 'ark-player-esp.webp', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
+	{ file: 'ark-zero-build-combat.webp', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
+	{ file: 'ark-zero-build-mode.webp', url: `${CDN_A}/screenshot-6380-1725916496012_gj96.1400.jpg` },
+	{ file: 'ark-al-mazrah-map.webp', url: 'https://sm.ign.com/t/ign_latam/gallery/f/ark-c/ark-chapter-5-underground-images_5h3j.1400.jpg' },
 ];
 
 const LEGACY_PATTERNS = [
-	/^tarkov-extract-fight/,
-	/^tarkov-operator-esp/,
-	/^tarkov-verdansk-combat/,
-	/^tarkov-scav-run-mode/,
-	/^tarkov-al-mazrah-map/,
+	/^ark-base raid-fight/,
+	/^ark-operator-esp/,
+	/^ark-verdansk-combat/,
+	/^ark-scav-run-mode/,
+	/^ark-al-mazrah-map/,
 ];
 
 async function fetchWebp(url) {
 	const res = await fetch(url, {
-		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; TarkovCheatsSite/1.0)' },
+		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ArkHacksSite/1.0)' },
 	});
 	if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
 	const input = Buffer.from(await res.arrayBuffer());
@@ -58,12 +58,12 @@ async function removeLegacyImages() {
 
 async function generateBrandAssets(heroBuffer) {
 	const logoBuffer = await sharp(heroBuffer)
-		.extract({ left: 420, top: 180, width: 520, height: 520 })
+		.base raid({ left: 420, top: 180, width: 520, height: 520 })
 		.resize(512, 512, { fit: 'cover' })
 		.webp({ quality: 88 })
 		.toBuffer();
 
-	await writeFile(path.join(imagesDir, 'escape-from-tarkov-cheats-logo.webp'), logoBuffer);
+	await writeFile(path.join(imagesDir, 'escape-from-ark-hacks-logo.webp'), logoBuffer);
 
 	const iconSizes = [
 		{ name: 'favicon-16x16.png', size: 16 },
@@ -93,7 +93,7 @@ for (const asset of KEYWORD_ASSETS) {
 		const dest = path.join(imagesDir, asset.file);
 		await writeFile(dest, webp);
 		console.log(`Saved ${asset.file} (${webp.length} bytes)`);
-		if (asset.file === 'escape-from-tarkov-cheats-hero.webp') heroBuffer = webp;
+		if (asset.file === 'escape-from-ark-hacks-hero.webp') heroBuffer = webp;
 	} catch (err) {
 		console.warn(`Skip ${asset.file}: ${err.message}`);
 	}
@@ -104,4 +104,4 @@ if (heroBuffer) {
 	console.log('Generated keyword logo + favicons from hero art.');
 }
 
-console.log(`Done — attempted ${KEYWORD_ASSETS.length} keyword-named Escape from Tarkov images.`);
+console.log(`Done — attempted ${KEYWORD_ASSETS.length} keyword-named ARK: Survival Ascended images.`);

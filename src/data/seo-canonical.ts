@@ -16,9 +16,9 @@ export {
 
 export const sitemapExcludedPageIds = new Set<PageId>(cannibalPageIds as PageId[]);
 
-/** Primary commercial landing for the head term "tarkov cheats". */
+/** Primary commercial landing for the head term "ark cheats". */
 export const MONEY_PAGE_ID = 'hacks' as const satisfies PageId;
-export const MONEY_PATH = '/tarkov-cheats/' as const;
+export const MONEY_PATH = '/ark-hacks/' as const;
 
 export function getCannibalTarget(pageId: PageId): PageId {
 	return getCannibalTargetId(pageId) as PageId;

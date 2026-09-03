@@ -40,7 +40,7 @@ for (const f of ['public/locales/en/translation.json', 'public/locales/es/transl
 	const j = JSON.parse(fs.readFileSync(f, 'utf8'));
 	j.images = { ...DESCRIPTIVE_IMAGE_ALTS };
 	if (j.hero) {
-		j.hero.imageAlt = '{{brand}} — Escape from Tarkov ESP and aimbot overlay';
+		j.hero.imageAlt = '{{brand}} — ARK: Survival Ascended ESP and aimbot overlay';
 	}
 	fs.writeFileSync(f, `${JSON.stringify(j, null, 2)}\n`);
 	console.log('updated', f);

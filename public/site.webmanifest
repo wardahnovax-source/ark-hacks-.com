@@ -1,11 +1,11 @@
 {
-  "name": "Tarkov Cheats",
-  "short_name": "Tarkov",
-  "description": "Undetected tarkov cheats — ESP, aimbot, and radar for PC",
+  "name": "ARK Hacks",
+  "short_name": "ARK",
+  "description": "Undetected ark ascended hacks — ESP, aimbot, and radar for PC",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0811",
-  "theme_color": "#0a0811",
+  "background_color": "#0a1210",
+  "theme_color": "#0a1210",
   "icons": [
     {
       "src": "/favicon.png",

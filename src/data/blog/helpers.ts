@@ -1,5 +1,5 @@
 import { siteConfig } from '../site';
-import { tarkovImages } from '../tarkov';
+import { arkImages } from '../ark';
 import { blogSitemapImageMeta } from '../brand-sitemap';
 import {
 	defaultLocale,
@@ -12,20 +12,20 @@ import type { BlogImageKey, BlogPostDefinition, BlogTranslation, ResolvedBlogPos
 import { blogPosts as rawBlogPosts } from './posts.generated';
 
 const imageMap: Record<BlogImageKey, string> = {
-	hero: tarkovImages.espWallhack,
-	espWallhack: tarkovImages.espWallhack,
-	aimbotCombat: tarkovImages.aimbotCombat,
-	aimbotSkeleton: tarkovImages.aimbotSkeleton,
-	squadFight: tarkovImages.aimbotCombat,
-	headerArt: tarkovImages.playerEsp,
-	cheatsPackage: tarkovImages.espWallhack,
-	playerEsp: tarkovImages.playerEsp,
-	rebootFight: tarkovImages.aimbotCombat,
-	battleRoyaleCombat: tarkovImages.cheatsCombat,
-	battleRoyaleIslandMap: tarkovImages.espWallhack,
+	hero: arkImages.espWallhack,
+	espWallhack: arkImages.espWallhack,
+	aimbotCombat: arkImages.aimbotCombat,
+	aimbotSkeleton: arkImages.aimbotSkeleton,
+	squadFight: arkImages.aimbotCombat,
+	headerArt: arkImages.playerEsp,
+	cheatsPackage: arkImages.espWallhack,
+	playerEsp: arkImages.playerEsp,
+	rebootFight: arkImages.aimbotCombat,
+	battleRoyaleCombat: arkImages.cheatsCombat,
+	battleRoyaleIslandMap: arkImages.espWallhack,
 };
 
-const FALLBACK_BLOG_IMAGE = tarkovImages.espWallhack;
+const FALLBACK_BLOG_IMAGE = arkImages.espWallhack;
 
 function expandTranslations(
 	translations: Partial<Record<LocaleCode, BlogTranslation>> & { en: BlogTranslation },
@@ -186,7 +186,7 @@ export function getBlogSitemapEntriesForLocale(locale: LocaleCode) {
 	for (const post of blogPosts) {
 		const t = post.translations[locale];
 		const imageSrc = getBlogImageSrc(post.imageKey);
-		const isProductPost = /Tarkov Cheats|Aimbot|ESP|Undetected|Comparisons/i.test(post.category);
+		const isProductPost = /ARK Hacks|Aimbot|ESP|Undetected|Comparisons/i.test(post.category);
 		entries.push({
 			path: getBlogPostPath(locale, t.slug),
 			lastmod: post.updated,

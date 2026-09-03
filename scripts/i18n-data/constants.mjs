@@ -6,39 +6,39 @@ export const LOCALES = [
 ];
 
 export const PAGE_IDS = [
-	'home', 'tarkov-esp', 'tarkov-aimbot', 'features', 'pricing', 'setup',
-	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'battleye',
+	'home', 'ark-esp', 'ark-aimbot', 'features', 'pricing', 'setup',
+	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'eac',
 	'cheats-2026', 'hacks', 'cheat-download', 'mod-menu', 'soft-aim', 'best-cheats',
 	'aimbot-hack', 'esp-hack', 'unlock-all', 'privacy', 'refund', 'terms',
 ];
 
-/** Hero image per page — simple tarkov cheats keyword filenames. */
+/** Hero image per page — simple ark cheats keyword filenames. */
 export const HERO_IMAGES = {
-	home: '/images/tarkov-cheats-esp.webp',
-	'tarkov-esp': '/images/tarkov-cheats-radar.webp',
-	'tarkov-aimbot': '/images/tarkov-cheats-aimbot.webp',
-	features: '/images/tarkov-cheats-aimbot-view.webp',
-	pricing: '/images/tarkov-cheats-raid.webp',
-	setup: '/images/tarkov-cheats-radar.webp',
-	updates: '/images/tarkov-cheats-esp.webp',
-	faq: '/images/tarkov-cheats-aimbot-view.webp',
-	support: '/images/tarkov-cheats-raid.webp',
-	undetected: '/images/tarkov-cheats-wallhack.webp',
-	wallhack: '/images/tarkov-cheats-wallhack.webp',
-	radar: '/images/tarkov-cheats-radar.webp',
-	battleye: '/images/tarkov-cheats-aimbot.webp',
-	'cheats-2026': '/images/tarkov-cheats-esp.webp',
-	hacks: '/images/tarkov-cheats-raid.webp',
-	'cheat-download': '/images/tarkov-cheats-raid.webp',
-	'mod-menu': '/images/tarkov-cheats-radar.webp',
-	'soft-aim': '/images/tarkov-cheats-aimbot-view.webp',
-	'best-cheats': '/images/tarkov-cheats-esp.webp',
-	'aimbot-hack': '/images/tarkov-cheats-aimbot-view.webp',
-	'esp-hack': '/images/tarkov-cheats-wallhack.webp',
-	'unlock-all': '/images/tarkov-cheats-radar.webp',
-	privacy: '/images/tarkov-cheats-aimbot.webp',
-	refund: '/images/tarkov-cheats-raid.webp',
-	terms: '/images/tarkov-cheats-aimbot-view.webp',
+	home: '/images/ark-hacks-esp.webp',
+	'ark-esp': '/images/ark-hacks-radar.webp',
+	'ark-aimbot': '/images/ark-hacks-aimbot.webp',
+	features: '/images/ark-hacks-aimbot-view.webp',
+	pricing: '/images/ark-hacks-raid.webp',
+	setup: '/images/ark-hacks-radar.webp',
+	updates: '/images/ark-hacks-esp.webp',
+	faq: '/images/ark-hacks-aimbot-view.webp',
+	support: '/images/ark-hacks-raid.webp',
+	undetected: '/images/ark-hacks-wallhack.webp',
+	wallhack: '/images/ark-hacks-wallhack.webp',
+	radar: '/images/ark-hacks-radar.webp',
+	eac: '/images/ark-hacks-aimbot.webp',
+	'cheats-2026': '/images/ark-hacks-esp.webp',
+	hacks: '/images/ark-hacks-raid.webp',
+	'cheat-download': '/images/ark-hacks-raid.webp',
+	'mod-menu': '/images/ark-hacks-radar.webp',
+	'soft-aim': '/images/ark-hacks-aimbot-view.webp',
+	'best-cheats': '/images/ark-hacks-esp.webp',
+	'aimbot-hack': '/images/ark-hacks-aimbot-view.webp',
+	'esp-hack': '/images/ark-hacks-wallhack.webp',
+	'unlock-all': '/images/ark-hacks-radar.webp',
+	privacy: '/images/ark-hacks-aimbot.webp',
+	refund: '/images/ark-hacks-raid.webp',
+	terms: '/images/ark-hacks-aimbot-view.webp',
 };
 
 export const TS_HEADER = `import type { LocaleCode } from './locales';
@@ -70,7 +70,7 @@ export type LocaleUi = {
 \t\theaderArt: string; cheatsPackage: string; rebootFight: string; battleRoyale: string; battleRoyaleIsland: string;
 \t};
 };
-export type PageId = 'home' | 'tarkov-esp' | 'tarkov-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'battleye' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
+export type PageId = 'home' | 'ark-esp' | 'ark-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'eac' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
 `;
 
 /** Clamp meta strings to SEO limits without ugly ellipsis. */
@@ -101,7 +101,7 @@ export function stripZadeyoFromMeta(text) {
 		.replace(/\s*Zadeyo delivery\.?/gi, ' instant digital delivery.')
 		.replace(/\s*and Zadeyo delivery\.?/gi, ' and instant digital delivery.')
 		.replace(/\|\s*Instant Zadeyo Delivery/g, '| Instant Digital Delivery')
-		.replace(/Buy on Zadeyo/g, 'Buy Tarkov Cheats')
+		.replace(/Buy on Zadeyo/g, 'Buy ARK Hacks')
 		.replace(/\s{2,}/g, ' ')
 		.trim();
 }
@@ -124,11 +124,11 @@ export function section(h2, ...args) {
 /** Authoritative external citation helpers (open in new tab). */
 export const EXT = {
 	activision:
-		'<a href="https://www.escapefromtarkov.com/" target="_blank" rel="noopener noreferrer">Escape from Tarkov</a>',
-	tarkov:
-		'<a href="https://www.escapefromtarkov.com/" target="_blank" rel="noopener noreferrer">Escape from Tarkov</a>',
+		'<a href="https://www.escapefromark.com/" target="_blank" rel="noopener noreferrer">ARK: Survival Ascended</a>',
+	ark:
+		'<a href="https://www.escapefromark.com/" target="_blank" rel="noopener noreferrer">ARK: Survival Ascended</a>',
 	status:
-		'<a href="https://www.escapefromtarkov.com/support" target="_blank" rel="noopener noreferrer">Escape from Tarkov Support</a>',
-	battleye:
-		'<a href="https://www.battleye.com/" target="_blank" rel="noopener noreferrer">BattlEye Anti-Cheat</a>',
+		'<a href="https://www.escapefromark.com/support" target="_blank" rel="noopener noreferrer">ARK: Survival Ascended Support</a>',
+	eac:
+		'<a href="https://www.eac.com/" target="_blank" rel="noopener noreferrer">Easy Anti-Cheat Anti-Cheat</a>',
 };

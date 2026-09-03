@@ -1,5 +1,5 @@
 ---
-import { tarkovImages } from '../data/tarkov';
+import { arkImages } from '../data/ark';
 import { getUi } from '../data/i18n';
 import { getGalleryUi } from '../data/i18n/gallery-ui';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
@@ -21,7 +21,7 @@ const galleryAlts = [
 	ui.images.squadFight,
 ] as const;
 
-const galleryImages = tarkovImages.gallery.slice(0, 4).map((image, index) => ({
+const galleryImages = arkImages.gallery.slice(0, 4).map((image, index) => ({
 	src: image.src,
 	alt: galleryAlts[index] ?? image.alt,
 }));

@@ -1,16 +1,16 @@
 import { siteConfig } from './site';
-import { tarkovImages } from './tarkov';
+import { arkImages } from './ark';
 import { pageIds, type PageId } from './i18n/routing';
 import { pageSitemapImageLabels } from './brand-sitemap';
 
 /** Rotating product screenshots for FAQ / review detail URLs. */
 export const crawlPhotoPool = [
-	tarkovImages.espWallhack,
-	tarkovImages.aimbotCombat,
-	tarkovImages.aimbotSkeleton,
-	tarkovImages.playerEsp,
-	tarkovImages.cheatsCombat,
-	'/images/tarkov-cheats-esp.webp',
+	arkImages.espWallhack,
+	arkImages.aimbotCombat,
+	arkImages.aimbotSkeleton,
+	arkImages.playerEsp,
+	arkImages.cheatsCombat,
+	'/images/ark-hacks-esp.webp',
 ] as const;
 
 /**
@@ -18,31 +18,31 @@ export const crawlPhotoPool = [
  * Prefer compressed WebP screenshots so Google can fetch them quickly.
  */
 export const pageImageSrcById: Record<PageId, string> = {
-	home: '/images/tarkov-cheats-hero-1024w.webp',
-	'tarkov-esp': tarkovImages.playerEsp,
-	'tarkov-aimbot': tarkovImages.aimbotCombat,
-	features: tarkovImages.aimbotSkeleton,
-	pricing: tarkovImages.cheatsCombat,
-	setup: tarkovImages.playerEsp,
-	updates: '/images/tarkov-cheats-hero-1024w.webp',
-	faq: tarkovImages.aimbotSkeleton,
-	support: tarkovImages.cheatsCombat,
-	undetected: tarkovImages.espWallhack,
-	wallhack: tarkovImages.espWallhack,
-	radar: tarkovImages.playerEsp,
-	battleye: tarkovImages.aimbotCombat,
-	'cheats-2026': '/images/tarkov-cheats-hero-1024w.webp',
-	hacks: tarkovImages.cheatsCombat,
-	'cheat-download': tarkovImages.cheatsCombat,
-	'mod-menu': tarkovImages.playerEsp,
-	'soft-aim': tarkovImages.aimbotSkeleton,
-	'best-cheats': '/images/tarkov-cheats-hero-1024w.webp',
-	'aimbot-hack': tarkovImages.aimbotSkeleton,
-	'esp-hack': tarkovImages.espWallhack,
-	'unlock-all': tarkovImages.playerEsp,
-	privacy: tarkovImages.aimbotCombat,
-	refund: tarkovImages.cheatsCombat,
-	terms: tarkovImages.aimbotSkeleton,
+	home: '/images/ark-hacks-hero-1024w.webp',
+	'ark-esp': arkImages.playerEsp,
+	'ark-aimbot': arkImages.aimbotCombat,
+	features: arkImages.aimbotSkeleton,
+	pricing: arkImages.cheatsCombat,
+	setup: arkImages.playerEsp,
+	updates: '/images/ark-hacks-hero-1024w.webp',
+	faq: arkImages.aimbotSkeleton,
+	support: arkImages.cheatsCombat,
+	undetected: arkImages.espWallhack,
+	wallhack: arkImages.espWallhack,
+	radar: arkImages.playerEsp,
+	eac: arkImages.aimbotCombat,
+	'cheats-2026': '/images/ark-hacks-hero-1024w.webp',
+	hacks: arkImages.cheatsCombat,
+	'cheat-download': arkImages.cheatsCombat,
+	'mod-menu': arkImages.playerEsp,
+	'soft-aim': arkImages.aimbotSkeleton,
+	'best-cheats': '/images/ark-hacks-hero-1024w.webp',
+	'aimbot-hack': arkImages.aimbotSkeleton,
+	'esp-hack': arkImages.espWallhack,
+	'unlock-all': arkImages.playerEsp,
+	privacy: arkImages.aimbotCombat,
+	refund: arkImages.cheatsCombat,
+	terms: arkImages.aimbotSkeleton,
 };
 
 for (const pageId of pageIds) {

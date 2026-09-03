@@ -5,7 +5,7 @@ import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { productInfo, seoFaqs, siteConfig, customerReviewStats } from '../data/site';
 import { absoluteFaqUrl, getFaqPath } from '../data/faq';
-import { tarkovImages } from '../data/tarkov';
+import { arkImages } from '../data/ark';
 import { simplePageCopy } from '../data/i18n/simple-pages';
 import { getT } from '../i18n/server';
 import { getPageCrawlImage } from '../data/page-images';
@@ -48,7 +48,7 @@ const introEditByPage: Partial<Record<PageId, string>> = {
 const introEdit = locale === 'en' ? introEditByPage[pageId] : undefined;
 const gallery = [
 	{ src: crawl.src, alt: page.imageAlt || crawl.caption },
-	...tarkovImages.product.slice(0, 2).map((img) => ({
+	...arkImages.product.slice(0, 2).map((img) => ({
 		src: img.src,
 		alt: img.alt,
 	})),
@@ -80,7 +80,7 @@ const storeSchema =
 				description: productInfo.summary,
 				image: crawl.url,
 				brand: { '@type': 'Brand', name: productInfo.brand },
-				url: new URL('/tarkov-cheats/', siteConfig.url).href,
+				url: new URL('/ark-hacks/', siteConfig.url).href,
 				aggregateRating: {
 					'@type': 'AggregateRating',
 					ratingValue: customerReviewStats.averageRating.toFixed(1),
@@ -127,8 +127,8 @@ const eyebrowByPage: Partial<Record<PageId, string>> = {
 	pricing: ui.nav.pricing,
 	updates: ui.nav.updates,
 	hacks: locale === 'en' ? t('nav.preview') : ui.nav.hacks,
-	'tarkov-esp': ui.nav.esp,
-	'tarkov-aimbot': ui.nav.aimbot,
+	'ark-esp': ui.nav.esp,
+	'ark-aimbot': ui.nav.aimbot,
 	radar: 'Radar',
 	setup: ui.nav.setup,
 	faq: ui.nav.faq,

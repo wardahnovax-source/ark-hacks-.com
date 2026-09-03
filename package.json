@@ -1,5 +1,5 @@
 {
-	"name": "tarkov-cheats",
+	"name": "ark-hacks",
 	"type": "module",
 	"version": "1.0.0",
 	"engines": {
@@ -16,13 +16,13 @@
 		"dev:status": "astro dev status",
 		"dev:logs": "astro dev logs",
 		"optimize:images": "node scripts/optimize-responsive-images.mjs",
-		"fetch:images": "node scripts/fetch-tarkov-images.mjs",
+		"fetch:images": "node scripts/fetch-ark-images.mjs",
 		"generate:brand": "node scripts/generate-brand-assets.mjs",
 		"preview": "astro preview",
 		"validate:sitemaps": "node scripts/validate-sitemaps.mjs && node scripts/audit-sitemap-deep.mjs",
 		"generate:i18n": "node scripts/generate-i18n-content.mjs",
 		"deploy": "npm run build && wrangler deploy",
-		"pages:deploy": "wrangler pages deploy dist --project-name=tarkovcheats",
+		"pages:deploy": "wrangler pages deploy dist --project-name=arkhacks",
 		"astro": "astro"
 	},
 	"dependencies": {

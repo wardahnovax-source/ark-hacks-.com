@@ -50,10 +50,10 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			{
 				h2: 'ESP & wallhack',
 				paragraphs: [
-					'See PMCs, Scavs, bosses, and loot through walls with distance readouts.',
+					'See players, wild dinos, bosses, and loot through walls with distance readouts.',
 					'Use filters so the overlay stays clear in dorms, Factory, and scav-run chaos.',
 				],
-				list: ['Player boxes & distance', 'Loot and extract markers', 'Boss and Scav filters'],
+				list: ['Player boxes & distance', 'Loot and base raid markers', 'Boss and dino filters'],
 			},
 			{
 				h2: 'Aimbot & soft aim',
@@ -67,9 +67,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'Radar',
 				paragraphs: [
 					'A simple 2D radar for threats outside your view.',
-					'Spot flanks near extracts without filling the whole screen.',
+					'Spot flanks near base raids without filling the whole screen.',
 				],
-				list: ['Nearby enemy cues', 'Adjustable range', 'Works in PMC & Scav'],
+				list: ['Nearby enemy cues', 'Adjustable range', 'Works in PvP & PvE'],
 			},
 			{
 				h2: 'Updates & support',
@@ -124,14 +124,14 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		h1: 'Status',
 		intro: brandCopy.statusIntro,
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Tarkov Cheats overview',
-		ctaSecondaryHref: '/tarkov-cheats/',
+		ctaSecondary: 'ARK Hacks overview',
+		ctaSecondaryHref: '/ark-hacks/',
 		galleryTitle: 'In-game look',
 		sections: [
 			{
 				h2: 'Current status',
 				paragraphs: [
-					'As of 13 Aug 2026 the package is online for Escape from Tarkov on Windows PC. We post a new note here when a game or BattlEye patch needs a rebuild.',
+					'As of 13 Aug 2026 the package is online for ARK: Survival Ascended on Windows PC. We post a new note here when a game or EAC patch needs a rebuild.',
 					'If Status is green, you can raid. If we are rebuilding, wait for the next note.',
 				],
 				list: [
@@ -157,7 +157,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 	hacks: page({
 		title: brandSeo.previewTitle,
 		description: brandSeo.previewDescription,
-		h1: 'Tarkov Cheats',
+		h1: 'ARK Hacks',
 		intro: brandCopy.previewIntro,
 		ctaPrimary: brandCopy.ctaBuy,
 		ctaSecondary: 'View features',
@@ -167,24 +167,24 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			{
 				h2: 'What you get',
 				paragraphs: [
-					'One license for Escape from Tarkov on Windows PC — built for PMC raids and Scav runs.',
+					'One license for ARK: Survival Ascended on Windows PC — built for PvP servers and tribe raids.',
 				],
 				list: [
 					'ESP / wallhack with distance',
 					'Soft aim & aimbot profiles',
 					'2D radar for flanks',
-					'BattlEye rebuilds after patches',
+					'Easy Anti-Cheat rebuilds after patches',
 				],
 			},
 			{
-				h2: 'Built for Tarkov raids',
+				h2: 'Built for ARK raids',
 				paragraphs: [
-					'Read PMCs and Scavs before you push, mark loot worth the risk, and stay aware near extracts. Tune soft aim per weapon class for dorms, Factory, and long-range maps.',
+					'Read players and wild dinos before you push, mark loot worth the risk, and stay aware near base raids. Tune soft aim per weapon class for dorms, Factory, and long-range maps.',
 				],
 				list: [
-					'<a href="/tarkov-esp/">ESP guide</a>',
-					'<a href="/tarkov-aimbot/">Aimbot controls</a>',
-					'<a href="/tarkov-radar-hack/">Radar overlay</a>',
+					'<a href="/ark-esp/">ESP guide</a>',
+					'<a href="/ark-aimbot/">Aimbot controls</a>',
+					'<a href="/ark-radar-hack/">Radar overlay</a>',
 					'<a href="/updates/">Live status</a>',
 				],
 			},
@@ -199,47 +199,47 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			},
 		],
 	}),
-	'tarkov-esp': page({
-		title: 'Tarkov ESP | {brand}',
+	'ark-esp': page({
+		title: 'ARK ESP | {brand}',
 		description:
-			'Tarkov ESP and wallhack for Escape from Tarkov on Windows PC — player boxes, distance, loot filters, and clear overlays in raids.',
+			'ARK ESP and wallhack for ARK: Survival Ascended on Windows PC — player boxes, distance, loot filters, and clear overlays in raids.',
 		h1: 'ESP',
-		intro: 'See players and loot through walls during Tarkov raids. Part of the same {brand} license.',
+		intro: 'See players and loot through walls during ARK raids. Part of the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Tarkov Cheats overview',
-		ctaSecondaryHref: '/tarkov-cheats/',
+		ctaSecondary: 'ARK Hacks overview',
+		ctaSecondaryHref: '/ark-hacks/',
 		galleryTitle: 'ESP in raid',
 		sections: [
 			{
 				h2: 'What ESP shows',
-				paragraphs: ['Boxes, distance, and filters for PMCs, Scavs, bosses, and loot.'],
-				list: ['Player ESP', 'Loot markers', 'Boss and Scav filters'],
+				paragraphs: ['Boxes, distance, and filters for players, wild dinos, bosses, and loot.'],
+				list: ['Player ESP', 'Loot markers', 'Boss and dino filters'],
 			},
 			{
 				h2: 'When to use it',
-				paragraphs: ['Clear dorms, Factory, and scav runs without flooding the screen.'],
+				paragraphs: ['Clear dorms, Factory, and PvE sessions without flooding the screen.'],
 				list: ['Tune opacity', 'Filter noise', 'Pair with radar'],
 			},
 			{
 				h2: 'Next steps',
 				paragraphs: ['ESP is included with aimbot and radar in one plan.'],
 				list: [
-					'<a href="/tarkov-cheats/">Full product</a>',
+					'<a href="/ark-hacks/">Full product</a>',
 					'<a href="/features/">All features</a>',
 					'<a href="/pricing/">Store</a>',
 				],
 			},
 		],
 	}),
-	'tarkov-aimbot': page({
-		title: 'Tarkov Aimbot | {brand}',
+	'ark-aimbot': page({
+		title: 'ARK Aimbot | {brand}',
 		description:
-			'Tarkov aimbot and soft aim for Escape from Tarkov on Windows PC — FOV, smoothness, and bone priority you can tune per weapon.',
+			'ARK aimbot and soft aim for ARK: Survival Ascended on Windows PC — FOV, smoothness, and bone priority you can tune per weapon.',
 		h1: 'Aimbot',
-		intro: 'Soft aim and aim assist you can tune for Tarkov. Included in the same {brand} license.',
+		intro: 'Soft aim and aim assist you can tune for ARK. Included in the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Tarkov Cheats overview',
-		ctaSecondaryHref: '/tarkov-cheats/',
+		ctaSecondary: 'ARK Hacks overview',
+		ctaSecondaryHref: '/ark-hacks/',
 		galleryTitle: 'Aimbot view',
 		sections: [
 			{
@@ -256,7 +256,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'Next steps',
 				paragraphs: ['Aimbot ships with ESP and radar in one license.'],
 				list: [
-					'<a href="/tarkov-cheats/">Full product</a>',
+					'<a href="/ark-hacks/">Full product</a>',
 					'<a href="/features/">All features</a>',
 					'<a href="/pricing/">Store</a>',
 				],
@@ -264,27 +264,27 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		],
 	}),
 	radar: page({
-		title: 'Tarkov Radar | {brand}',
+		title: 'ARK Radar | {brand}',
 		description:
-			'Tarkov 2D radar for Escape from Tarkov on Windows PC — flank cues near extracts without filling the whole screen.',
+			'ARK 2D radar for ARK: Survival Ascended on Windows PC — flank cues near base raids without filling the whole screen.',
 		h1: 'Radar',
 		intro: 'A simple 2D radar for threats outside your view. Included in the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Tarkov Cheats overview',
-		ctaSecondaryHref: '/tarkov-cheats/',
+		ctaSecondary: 'ARK Hacks overview',
+		ctaSecondaryHref: '/ark-hacks/',
 		galleryTitle: 'Radar overlay',
 		sections: [
 			{
 				h2: 'What it shows',
-				paragraphs: ['Nearby enemy cues with adjustable range for PMC and Scav runs.'],
+				paragraphs: ['Nearby enemy cues with adjustable range for player and PvE sessions.'],
 				list: ['Flank awareness', 'Extract approaches', 'Adjustable range'],
 			},
 			{
 				h2: 'With ESP',
 				paragraphs: ['Use radar for threats you cannot see yet. Use ESP when you push.'],
 				list: [
-					'<a href="/tarkov-esp/">ESP guide</a>',
-					'<a href="/tarkov-cheats/">Full product</a>',
+					'<a href="/ark-esp/">ESP guide</a>',
+					'<a href="/ark-hacks/">Full product</a>',
 					'<a href="/pricing/">Store</a>',
 				],
 			},
