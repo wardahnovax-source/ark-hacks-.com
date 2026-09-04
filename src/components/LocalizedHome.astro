@@ -160,6 +160,144 @@ const extraGraph: Record<string, unknown>[] = [
 		border-bottom: 1px solid var(--line-soft);
 	}
 
+	.home-about {
+		padding-block: clamp(2rem, 4vw, 2.75rem);
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.home-about__head {
+		margin-bottom: 1.35rem;
+		max-width: 42rem;
+	}
+
+	.home-about__eyebrow {
+		margin: 0 0 0.45rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.home-about__head h2 {
+		margin: 0 0 0.65rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
+		color: var(--ink);
+		background: linear-gradient(135deg, var(--ink) 0%, var(--magenta-soft) 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.home-about__lede {
+		margin: 0;
+		font-size: 0.9375rem;
+		line-height: 1.65;
+		color: var(--ink-muted);
+	}
+
+	.home-about__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 0.65rem;
+		margin-bottom: 1.35rem;
+	}
+
+	.home-about__card {
+		padding: 1rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+		transition: border-color 0.2s ease;
+	}
+
+	.home-about__card:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+	}
+
+	.home-about__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		margin-bottom: 0.65rem;
+		border-radius: 0.55rem;
+		background: color-mix(in srgb, var(--magenta) 14%, transparent);
+		color: var(--magenta-soft);
+	}
+
+	.home-about__icon svg {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.home-about__card h3 {
+		margin: 0 0 0.35rem;
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.home-about__card p {
+		margin: 0;
+		font-size: 0.8125rem;
+		line-height: 1.5;
+		color: var(--ink-muted);
+	}
+
+	.home-about__links-label {
+		margin: 0 0 0.65rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--ink);
+	}
+
+	.home-about__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+	}
+
+	.home-about__pills a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.45rem 0.85rem;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		background: var(--bg-elevated);
+		color: var(--magenta-soft);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition:
+			background 0.15s ease,
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+
+	.home-about__pills a:hover {
+		background: color-mix(in srgb, var(--magenta) 12%, transparent);
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		color: var(--ink);
+	}
+
+	@media (max-width: 900px) {
+		.home-about__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 480px) {
+		.home-about__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	.home__prose--en a {
 		color: var(--magenta-soft);
 		font-weight: 600;
