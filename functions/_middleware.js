@@ -26,7 +26,8 @@ const LEGACY_HOSTS = new Set([
 	'www.warzonescheats.xyz',
 ]);
 
-// Keep in sync with public/_redirects (which preserves query strings by default, as we do below).
+// Locale cannibal 301s: functions/cannibal-redirects.json (not public/_redirects — CF 100-rule limit).
+// Keep PATH_REDIRECTS in sync with public/_redirects for shared static rules.
 const PATH_REDIRECTS = {
 	'/sitemap-0.xml': '/sitemap.xml',
 	'/sitemap-index.xml': '/sitemap.xml',
