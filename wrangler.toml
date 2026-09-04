@@ -1,7 +1,16 @@
-# CI Workers Builds project name (repo: arkcheats)
+# CI Workers Builds project name (repo: ark-hacks-.com)
 name = "ark-hacks--com"
 compatibility_date = "2026-01-01"
 main = "src/worker.ts"
+
+# Attach production domains to this Worker on deploy (replaces Hello-world stub worker).
+[[routes]]
+pattern = "arkhacks.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.arkhacks.com"
+custom_domain = true
 
 # Cloudflare CI runs `npx wrangler deploy` — build static assets before upload.
 [build]
