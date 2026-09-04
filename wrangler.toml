@@ -3,6 +3,10 @@ name = "arkhacks"
 compatibility_date = "2026-01-01"
 main = "src/worker.ts"
 
+# Cloudflare CI runs `npx wrangler deploy` — build static assets before upload.
+[build]
+command = "npm run build"
+
 [assets]
 directory = "./dist"
 binding = "ASSETS"
