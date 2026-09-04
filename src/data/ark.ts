@@ -23,12 +23,9 @@ export const arkImages = {
 	battleRoyaleIsland: '/images/ark-hacks-esp.webp',
 	raidMap: '/images/ark-hacks-esp.webp',
 	product: [
-		{ src: '/images/ark-hacks-esp.webp', alt: 'ESP player boxes in an ARK: Survival Ascended raid' },
 		{ src: '/images/ark-hacks-wallhack.webp', alt: 'Wallhack outlines for players and wild dinos' },
 		{ src: '/images/ark-hacks-aimbot.webp', alt: 'Soft aim assist overlay for ARK' },
-		{ src: '/images/ark-hacks-esp.webp', alt: 'Loot and base raid ESP markers' },
-		{ src: '/images/ark-hacks-wallhack.webp', alt: 'Through-wall visibility during a raid' },
-		{ src: '/images/ark-hacks-aimbot.webp', alt: 'Aimbot bone priority settings' },
+		{ src: '/images/ark-hacks-aimbot-view.webp', alt: 'Aimbot bone priority settings' },
 	],
 	gallery: [
 		{ src: '/images/ark-hacks-esp.webp', alt: 'ESP overlay showing enemy distance', featured: true },

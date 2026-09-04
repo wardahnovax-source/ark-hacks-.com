@@ -46,13 +46,10 @@ const introEditByPage: Partial<Record<PageId, string>> = {
 	faq: 'faqIntro',
 };
 const introEdit = locale === 'en' ? introEditByPage[pageId] : undefined;
-const gallery = [
-	{ src: crawl.src, alt: page.imageAlt || crawl.caption },
-	...arkImages.product.slice(0, 2).map((img) => ({
-		src: img.src,
-		alt: img.alt,
-	})),
-];
+const gallery = arkImages.product.slice(0, 3).map((img) => ({
+	src: img.src,
+	alt: img.alt,
+}));
 
 const pageUrl = new URL(getLocalizedPath(pageId, locale), siteConfig.url).href;
 const priceValidUntil = '2027-12-31';
