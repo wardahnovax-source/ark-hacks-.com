@@ -1,0 +1,1065 @@
+{
+  "totalProvided": 161,
+  "dedicatedPagesCreated": 151,
+  "missing": 0,
+  "duplicatesRemoved": 10,
+  "rows": [
+    {
+      "url": "https://arkascendedcheats.com/",
+      "game": "ARK: Survival Ascended",
+      "path": "/guides/guide-arkascendedcheats-com/",
+      "ignImage": "/images/guides/ark-ascended.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://deadsidecheats.net/",
+      "game": "Deadside",
+      "path": "/guides/guide-deadsidecheats-net/",
+      "ignImage": "/images/guides/deadside.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://arcraiderscheat.net/",
+      "game": "ARC Raiders",
+      "path": "/guides/guide-arcraiderscheat-net/",
+      "ignImage": "/images/guides/arc-raiders.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://genshincheats.net/",
+      "game": "Genshin Impact",
+      "path": "/guides/guide-genshincheats-net/",
+      "ignImage": "/images/guides/genshin.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://dbdcheats.net/",
+      "game": "Dead by Daylight",
+      "path": "/guides/guide-dbdcheats-net/",
+      "ignImage": "/images/guides/dbd.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://tarkovcheats.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovcheats-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://unturnedcheats.net/",
+      "game": "Unturned",
+      "path": "/guides/guide-unturnedcheats-net/",
+      "ignImage": "/images/guides/unturned.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://unturnedcheats.com/",
+      "game": "Unturned",
+      "path": "/guides/guide-unturnedcheats-com/",
+      "ignImage": "/images/guides/unturned.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://warthundercheats.com/",
+      "game": "War Thunder",
+      "path": "/guides/guide-warthundercheats-com/",
+      "ignImage": "/images/guides/war-thunder.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://fortniteaimbot.com/",
+      "game": "Fortnite",
+      "path": "/guides/guide-fortniteaimbot-com/",
+      "ignImage": "/images/guides/fortnite.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://marathoncheats.org/",
+      "game": "Marathon",
+      "path": "/guides/guide-marathoncheats-org/",
+      "ignImage": "/images/guides/marathon.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://battlefieldcheats.org/",
+      "game": "Battlefield",
+      "path": "/guides/guide-battlefieldcheats-org/",
+      "ignImage": "/images/guides/battlefield.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://lolcheats.org/",
+      "game": "League of Legends",
+      "path": "/guides/guide-lolcheats-org/",
+      "ignImage": "/images/guides/lol.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://warzonecheats.org/",
+      "game": "Call of Duty: Warzone",
+      "path": "/guides/guide-warzonecheats-org/",
+      "ignImage": "/images/guides/warzone.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://valocheats.com/",
+      "game": "Valorant",
+      "path": "/guides/guide-valocheats-com/",
+      "ignImage": "/images/guides/valorant.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://grayzonecheats.com/",
+      "game": "Gray Zone Warfare",
+      "path": "/guides/guide-grayzonecheats-com/",
+      "ignImage": "/images/guides/gray-zone.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://arcraiderscheats.org/",
+      "game": "ARC Raiders",
+      "path": "/guides/guide-arcraiderscheats-org/",
+      "ignImage": "/images/guides/arc-raiders.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://tarkovcheats.org/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovcheats-org/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://overwatchhacks.com/",
+      "game": "Overwatch 2",
+      "path": "/guides/guide-overwatchhacks-com/",
+      "ignImage": "/images/guides/overwatch.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://dbdcheats.org/",
+      "game": "Dead by Daylight",
+      "path": "/guides/guide-dbdcheats-org/",
+      "ignImage": "/images/guides/dbd.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://theislehacks.org/",
+      "game": "The Isle",
+      "path": "/guides/guide-theislehacks-org/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://islecheats.net/",
+      "game": "The Isle",
+      "path": "/guides/guide-islecheats-net/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://warthunderhacks.com/",
+      "game": "War Thunder",
+      "path": "/guides/guide-warthunderhacks-com/",
+      "ignImage": "/images/guides/war-thunder.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://marathoncheats.cc/",
+      "game": "Marathon",
+      "path": "/guides/guide-marathoncheats-cc/",
+      "ignImage": "/images/guides/marathon.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://besttarkovcheats.com/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-besttarkovcheats-com/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://thefinalscheats.org/",
+      "game": "The Finals",
+      "path": "/guides/guide-thefinalscheats-org/",
+      "ignImage": "/images/guides/the-finals.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://dayzcheat.net/",
+      "game": "DayZ",
+      "path": "/guides/guide-dayzcheat-net/",
+      "ignImage": "/images/guides/dayz.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://fncheats.net/",
+      "game": "Fortnite",
+      "path": "/guides/guide-fncheats-net/",
+      "ignImage": "/images/guides/fortnite.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://islecheat.com/",
+      "game": "The Isle",
+      "path": "/guides/guide-islecheat-com/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://deadsidecheats.com/",
+      "game": "Deadside",
+      "path": "/guides/guide-deadsidecheats-com/",
+      "ignImage": "/images/guides/deadside.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://marvelrivalscheat.net/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-marvelrivalscheat-net/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://meccacheats.com/",
+      "game": "Mecha Break",
+      "path": "/guides/guide-meccacheats-com/",
+      "ignImage": "/images/guides/mecha-break.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://rusthack.net/",
+      "game": "Rust",
+      "path": "/guides/guide-rusthack-net/",
+      "ignImage": "/images/guides/rust.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://grayzonecheats.net/",
+      "game": "Gray Zone Warfare",
+      "path": "/guides/guide-grayzonecheats-net/",
+      "ignImage": "/images/guides/gray-zone.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://unturnedhacks.com/",
+      "game": "Unturned",
+      "path": "/guides/guide-unturnedhacks-com/",
+      "ignImage": "/images/guides/unturned.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://palworldhack.net/",
+      "game": "Palworld",
+      "path": "/guides/guide-palworldhack-net/",
+      "ignImage": "/images/guides/palworld.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://r6siegecheats.net/",
+      "game": "Rainbow Six Siege",
+      "path": "/guides/guide-r6siegecheats-net/",
+      "ignImage": "/images/guides/r6-siege.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://eftcheat.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-eftcheat-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://calibercheats.com/",
+      "game": "Caliber",
+      "path": "/guides/guide-calibercheats-com/",
+      "ignImage": "/images/guides/caliber.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://codcheats.net/",
+      "game": "Call of Duty",
+      "path": "/guides/guide-codcheats-net/",
+      "ignImage": "/images/guides/cod.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://huntcheats.com/",
+      "game": "Hunt: Showdown",
+      "path": "/guides/guide-huntcheats-com/",
+      "ignImage": "/images/guides/hunt.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://lolcheat.net/",
+      "game": "League of Legends",
+      "path": "/guides/guide-lolcheat-net/",
+      "ignImage": "/images/guides/lol.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://marathonhacks.net/",
+      "game": "Marathon",
+      "path": "/guides/guide-marathonhacks-net/",
+      "ignImage": "/images/guides/marathon.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://mecchahacks.com/",
+      "game": "Mecha Break",
+      "path": "/guides/guide-mecchahacks-com/",
+      "ignImage": "/images/guides/mecha-break.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://palworldhack.com/",
+      "game": "Palworld",
+      "path": "/guides/guide-palworldhack-com/",
+      "ignImage": "/images/guides/palworld.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://tarkovhack.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovhack-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://warthundercheats.net/",
+      "game": "War Thunder",
+      "path": "/guides/guide-warthundercheats-net/",
+      "ignImage": "/images/guides/war-thunder.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://huntshowdowncheats.com/",
+      "game": "Hunt: Showdown",
+      "path": "/guides/guide-huntshowdowncheats-com/",
+      "ignImage": "/images/guides/hunt.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://destiny2cheats.com/",
+      "game": "Destiny 2",
+      "path": "/guides/guide-destiny2cheats-com/",
+      "ignImage": "/images/guides/destiny2.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://tarkovhacks.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovhacks-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://r6siegecheats.com/",
+      "game": "Rainbow Six Siege",
+      "path": "/guides/guide-r6siegecheats-com/",
+      "ignImage": "/images/guides/r6-siege.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://sandraiderscheat.com/",
+      "game": "Sand Raiders",
+      "path": "/guides/guide-sandraiderscheat-com/",
+      "ignImage": "/images/guides/sand-raiders.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://palworldhacks.com/",
+      "game": "Palworld",
+      "path": "/guides/guide-palworldhacks-com/",
+      "ignImage": "/images/guides/palworld.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://squadhacks.com/",
+      "game": "Squad",
+      "path": "/guides/guide-squadhacks-com/",
+      "ignImage": "/images/guides/squad.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://eftcheats.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-eftcheats-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://marathonhack.net/",
+      "game": "Marathon",
+      "path": "/guides/guide-marathonhack-net/",
+      "ignImage": "/images/guides/marathon.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://abicheats.com/",
+      "game": "Arena Breakout Infinite",
+      "path": "/guides/guide-abicheats-com/",
+      "ignImage": "/images/guides/abi.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://bodycamcheats.com/",
+      "game": "Bodycam",
+      "path": "/guides/guide-bodycamcheats-com/",
+      "ignImage": "/images/guides/bodycam.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://grayzonehacks.com/",
+      "game": "Gray Zone Warfare",
+      "path": "/guides/guide-grayzonehacks-com/",
+      "ignImage": "/images/guides/gray-zone.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://lolcheats.net/",
+      "game": "League of Legends",
+      "path": "/guides/guide-lolcheats-net/",
+      "ignImage": "/images/guides/lol.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://oncehumanhacks.com/",
+      "game": "Once Human",
+      "path": "/guides/guide-oncehumanhacks-com/",
+      "ignImage": "/images/guides/once-human.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://palworldhacks.net/",
+      "game": "Palworld",
+      "path": "/guides/guide-palworldhacks-net/",
+      "ignImage": "/images/guides/palworld.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://reforgercheats.com/",
+      "game": "Arma Reforger",
+      "path": "/guides/guide-reforgercheats-com/",
+      "ignImage": "/images/guides/reforger.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://rivalshacks.com/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-rivalshacks-com/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://oncehumancheats.net/",
+      "game": "Once Human",
+      "path": "/guides/guide-oncehumancheats-net/",
+      "ignImage": "/images/guides/once-human.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://overwatchcheat.net/",
+      "game": "Overwatch 2",
+      "path": "/guides/guide-overwatchcheat-net/",
+      "ignImage": "/images/guides/overwatch.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://dayzhack.net/",
+      "game": "DayZ",
+      "path": "/guides/guide-dayzhack-net/",
+      "ignImage": "/images/guides/dayz.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://battlefieldcheat.com/",
+      "game": "Battlefield",
+      "path": "/guides/guide-battlefieldcheat-com/",
+      "ignImage": "/images/guides/battlefield.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://abihacks.com/",
+      "game": "Arena Breakout Infinite",
+      "path": "/guides/guide-abihacks-com/",
+      "ignImage": "/images/guides/abi.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://arcraidershack.com/",
+      "game": "ARC Raiders",
+      "path": "/guides/guide-arcraidershack-com/",
+      "ignImage": "/images/guides/arc-raiders.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://backroomscheats.com/",
+      "game": "Backrooms",
+      "path": "/guides/guide-backroomscheats-com/",
+      "ignImage": "/images/guides/backrooms.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://marvelrivalshacks.net/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-marvelrivalshacks-net/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://mecchachameleonhacks.com/",
+      "game": "Mecha Break",
+      "path": "/guides/guide-mecchachameleonhacks-com/",
+      "ignImage": "/images/guides/mecha-break.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://mecchachameleonhacks.net/",
+      "game": "Mecha Break",
+      "path": "/guides/guide-mecchachameleonhacks-net/",
+      "ignImage": "/images/guides/mecha-break.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://overwatch2cheats.com/",
+      "game": "Overwatch 2",
+      "path": "/guides/guide-overwatch2cheats-com/",
+      "ignImage": "/images/guides/overwatch.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://sandraiderscheats.com/",
+      "game": "Sand Raiders",
+      "path": "/guides/guide-sandraiderscheats-com/",
+      "ignImage": "/images/guides/sand-raiders.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://rivalscheats.net/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-rivalscheats-net/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://squadcheat.com/",
+      "game": "Squad",
+      "path": "/guides/guide-squadcheat-com/",
+      "ignImage": "/images/guides/squad.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://sandraidersofsophiecheats.net/",
+      "game": "Sand Raiders",
+      "path": "/guides/guide-sandraidersofsophiecheats-net/",
+      "ignImage": "/images/guides/sand-raiders.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://tarkovcheat.net/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovcheat-net/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://thefinalscheats.net/",
+      "game": "The Finals",
+      "path": "/guides/guide-thefinalscheats-net/",
+      "ignImage": "/images/guides/the-finals.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://theislehacks.net/",
+      "game": "The Isle",
+      "path": "/guides/guide-theislehacks-net/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://valoranthack.net/",
+      "game": "Valorant",
+      "path": "/guides/guide-valoranthack-net/",
+      "ignImage": "/images/guides/valorant.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://warzonehacks.net/",
+      "game": "Call of Duty: Warzone",
+      "path": "/guides/guide-warzonehacks-net/",
+      "ignImage": "/images/guides/warzone.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://thefrontcheats.com/",
+      "game": "The Front",
+      "path": "/guides/guide-thefrontcheats-com/",
+      "ignImage": "/images/guides/the-front.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://lostarkcheats.net/",
+      "game": "ARK: Survival Ascended",
+      "path": "/guides/guide-lostarkcheats-net/",
+      "ignImage": "/images/guides/ark-ascended.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://valoranthacks.org/",
+      "game": "Valorant",
+      "path": "/guides/guide-valoranthacks-org/",
+      "ignImage": "/images/guides/valorant.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://siegehacks.com/",
+      "game": "Rainbow Six Siege",
+      "path": "/guides/guide-siegehacks-com/",
+      "ignImage": "/images/guides/r6-siege.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://warframehacks.com/",
+      "game": "Warframe",
+      "path": "/guides/guide-warframehacks-com/",
+      "ignImage": "/images/guides/warframe.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://warframecheat.com/",
+      "game": "Warframe",
+      "path": "/guides/guide-warframecheat-com/",
+      "ignImage": "/images/guides/warframe.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://narakacheats.org/",
+      "game": "Naraka: Bladepoint",
+      "path": "/guides/guide-narakacheats-org/",
+      "ignImage": "/images/guides/naraka.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://minecraftcheat.com/",
+      "game": "Minecraft",
+      "path": "/guides/guide-minecraftcheat-com/",
+      "ignImage": "/images/guides/minecraft.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://destiny2hack.com/",
+      "game": "Destiny 2",
+      "path": "/guides/guide-destiny2hack-com/",
+      "ignImage": "/images/guides/destiny2.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://poecheats.com/",
+      "game": "Path of Exile",
+      "path": "/guides/guide-poecheats-com/",
+      "ignImage": "/images/guides/poe.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://genshinhacks.com/",
+      "game": "Genshin Impact",
+      "path": "/guides/guide-genshinhacks-com/",
+      "ignImage": "/images/guides/genshin.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://arcraiderscheat.org/",
+      "game": "ARC Raiders",
+      "path": "/guides/guide-arcraiderscheat-org/",
+      "ignImage": "/images/guides/arc-raiders.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://palworldcheats.org/",
+      "game": "Palworld",
+      "path": "/guides/guide-palworldcheats-org/",
+      "ignImage": "/images/guides/palworld.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://theislecheat.net/",
+      "game": "The Isle",
+      "path": "/guides/guide-theislecheat-net/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://tarkovcheat.org/",
+      "game": "Escape from Tarkov",
+      "path": "/guides/guide-tarkovcheat-org/",
+      "ignImage": "/images/guides/tarkov.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://theislecheats.org/",
+      "game": "The Isle",
+      "path": "/guides/guide-theislecheats-org/",
+      "ignImage": "/images/guides/the-isle.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://raftcheats.com/",
+      "game": "Raft",
+      "path": "/guides/guide-raftcheats-com/",
+      "ignImage": "/images/guides/raft.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://sandhacks.com/",
+      "game": "Sand Raiders",
+      "path": "/guides/guide-sandhacks-com/",
+      "ignImage": "/images/guides/sand-raiders.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://seaofthievescheats.net/",
+      "game": "Sea of Thieves",
+      "path": "/guides/guide-seaofthievescheats-net/",
+      "ignImage": "/images/guides/sea-of-thieves.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://battlefieldhacks.net/",
+      "game": "Battlefield",
+      "path": "/guides/guide-battlefieldhacks-net/",
+      "ignImage": "/images/guides/battlefield.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://thefinalshacks.com/",
+      "game": "The Finals",
+      "path": "/guides/guide-thefinalshacks-com/",
+      "ignImage": "/images/guides/the-finals.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://deltaforcecheats.org/",
+      "game": "Delta Force",
+      "path": "/guides/guide-deltaforcecheats-org/",
+      "ignImage": "/images/guides/delta-force.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://warthunderhacks.net/",
+      "game": "War Thunder",
+      "path": "/guides/guide-warthunderhacks-net/",
+      "ignImage": "/images/guides/war-thunder.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://valohacks.com/",
+      "game": "Valorant",
+      "path": "/guides/guide-valohacks-com/",
+      "ignImage": "/images/guides/valorant.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://dbdcheat.org/",
+      "game": "Dead by Daylight",
+      "path": "/guides/guide-dbdcheat-org/",
+      "ignImage": "/images/guides/dbd.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://arkcheats.net/",
+      "game": "ARK: Survival Ascended",
+      "path": "/guides/guide-arkcheats-net/",
+      "ignImage": "/images/guides/ark-ascended.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://unturnedcheats.org/",
+      "game": "Unturned",
+      "path": "/guides/guide-unturnedcheats-org/",
+      "ignImage": "/images/guides/unturned.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://warthundercheats.org/",
+      "game": "War Thunder",
+      "path": "/guides/guide-warthundercheats-org/",
+      "ignImage": "/images/guides/war-thunder.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://seaofthievescheats.org/",
+      "game": "Sea of Thieves",
+      "path": "/guides/guide-seaofthievescheats-org/",
+      "ignImage": "/images/guides/sea-of-thieves.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://warframecheats.net/",
+      "game": "Warframe",
+      "path": "/guides/guide-warframecheats-net/",
+      "ignImage": "/images/guides/warframe.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://dunecheats.com/",
+      "game": "Dune: Awakening",
+      "path": "/guides/guide-dunecheats-com/",
+      "ignImage": "/images/guides/dune.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://wutheringwavescheats.org/",
+      "game": "Wuthering Waves",
+      "path": "/guides/guide-wutheringwavescheats-org/",
+      "ignImage": "/images/guides/wuthering-waves.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://genshincheats.org/",
+      "game": "Genshin Impact",
+      "path": "/guides/guide-genshincheats-org/",
+      "ignImage": "/images/guides/genshin.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://narakahacks.com/",
+      "game": "Naraka: Bladepoint",
+      "path": "/guides/guide-narakahacks-com/",
+      "ignImage": "/images/guides/naraka.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://huntcheats.net/",
+      "game": "Hunt: Showdown",
+      "path": "/guides/guide-huntcheats-net/",
+      "ignImage": "/images/guides/hunt.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://combatmastercheats.com/",
+      "game": "Combat Master",
+      "path": "/guides/guide-combatmastercheats-com/",
+      "ignImage": "/images/guides/combat-master.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://combatmastercheats.net/",
+      "game": "Combat Master",
+      "path": "/guides/guide-combatmastercheats-net/",
+      "ignImage": "/images/guides/combat-master.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://dunecheats.net/",
+      "game": "Dune: Awakening",
+      "path": "/guides/guide-dunecheats-net/",
+      "ignImage": "/images/guides/dune.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://fncheat.com/",
+      "game": "Fortnite",
+      "path": "/guides/guide-fncheat-com/",
+      "ignImage": "/images/guides/fortnite.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://deltaforcecheat.org/",
+      "game": "Delta Force",
+      "path": "/guides/guide-deltaforcecheat-org/",
+      "ignImage": "/images/guides/delta-force.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://combatmastercheats.org/",
+      "game": "Combat Master",
+      "path": "/guides/guide-combatmastercheats-org/",
+      "ignImage": "/images/guides/combat-master.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://foxholecheats.com/",
+      "game": "Foxhole",
+      "path": "/guides/guide-foxholecheats-com/",
+      "ignImage": "/images/guides/foxhole.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://foxholecheats.net/",
+      "game": "Foxhole",
+      "path": "/guides/guide-foxholecheats-net/",
+      "ignImage": "/images/guides/foxhole.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://seaofthievescheat.net/",
+      "game": "Sea of Thieves",
+      "path": "/guides/guide-seaofthievescheat-net/",
+      "ignImage": "/images/guides/sea-of-thieves.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://marvelrivalshack.com/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-marvelrivalshack-com/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://thefinalshack.com/",
+      "game": "The Finals",
+      "path": "/guides/guide-thefinalshack-com/",
+      "ignImage": "/images/guides/the-finals.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://exobornecheats.com/",
+      "game": "Exoborne",
+      "path": "/guides/guide-exobornecheats-com/",
+      "ignImage": "/images/guides/exoborne.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://marvelrivalshack.net/",
+      "game": "Marvel Rivals",
+      "path": "/guides/guide-marvelrivalshack-net/",
+      "ignImage": "/images/guides/marvel-rivals.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://codhacks.net/",
+      "game": "Call of Duty",
+      "path": "/guides/guide-codhacks-net/",
+      "ignImage": "/images/guides/cod.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://nba2k26cheats.net/",
+      "game": "NBA 2K26",
+      "path": "/guides/guide-nba2k26cheats-net/",
+      "ignImage": "/images/guides/nba2k26.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://nba2k26cheats.com/",
+      "game": "NBA 2K26",
+      "path": "/guides/guide-nba2k26cheats-com/",
+      "ignImage": "/images/guides/nba2k26.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://destiny2hacks.net/",
+      "game": "Destiny 2",
+      "path": "/guides/guide-destiny2hacks-net/",
+      "ignImage": "/images/guides/destiny2.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://bodycamcheats.net/",
+      "game": "Bodycam",
+      "path": "/guides/guide-bodycamcheats-net/",
+      "ignImage": "/images/guides/bodycam.webp",
+      "anchorText": "more game information"
+    },
+    {
+      "url": "https://tf2cheats.org/",
+      "game": "Team Fortress 2",
+      "path": "/guides/guide-tf2cheats-org/",
+      "ignImage": "/images/guides/tf2.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://deadsidecheat.com/",
+      "game": "Deadside",
+      "path": "/guides/guide-deadsidecheat-com/",
+      "ignImage": "/images/guides/deadside.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://enlistedcheat.org/",
+      "game": "Enlisted",
+      "path": "/guides/guide-enlistedcheat-org/",
+      "ignImage": "/images/guides/enlisted.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://scumcheats.org/",
+      "game": "SCUM",
+      "path": "/guides/guide-scumcheats-org/",
+      "ignImage": "/images/guides/scum.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://nba2k26hacks.com/",
+      "game": "NBA 2K26",
+      "path": "/guides/guide-nba2k26hacks-com/",
+      "ignImage": "/images/guides/nba2k26.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://deadsidecheats.org/",
+      "game": "Deadside",
+      "path": "/guides/guide-deadsidecheats-org/",
+      "ignImage": "/images/guides/deadside.webp",
+      "anchorText": "further reading"
+    },
+    {
+      "url": "https://warframehacks.net/",
+      "game": "Warframe",
+      "path": "/guides/guide-warframehacks-net/",
+      "ignImage": "/images/guides/warframe.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://nba2k26cheats.org/",
+      "game": "NBA 2K26",
+      "path": "/guides/guide-nba2k26cheats-org/",
+      "ignImage": "/images/guides/nba2k26.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://groundedcheats.net/",
+      "game": "Grounded",
+      "path": "/guides/guide-groundedcheats-net/",
+      "ignImage": "/images/guides/grounded.webp",
+      "anchorText": "this resource"
+    },
+    {
+      "url": "https://groundedcheats.com/",
+      "game": "Grounded",
+      "path": "/guides/guide-groundedcheats-com/",
+      "ignImage": "/images/guides/grounded.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://groundedhacks.net/",
+      "game": "Grounded",
+      "path": "/guides/guide-groundedhacks-net/",
+      "ignImage": "/images/guides/grounded.webp",
+      "anchorText": "additional guides"
+    },
+    {
+      "url": "https://groundedhacks.org/",
+      "game": "Grounded",
+      "path": "/guides/guide-groundedhacks-org/",
+      "ignImage": "/images/guides/grounded.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://enlistedhacks.net/",
+      "game": "Enlisted",
+      "path": "/guides/guide-enlistedhacks-net/",
+      "ignImage": "/images/guides/enlisted.webp",
+      "anchorText": "related resources"
+    },
+    {
+      "url": "https://enlistedhacks.com/",
+      "game": "Enlisted",
+      "path": "/guides/guide-enlistedhacks-com/",
+      "ignImage": "/images/guides/enlisted.webp",
+      "anchorText": "related resources"
+    }
+  ]
+}

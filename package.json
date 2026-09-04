@@ -21,6 +21,8 @@
 		"preview": "astro preview",
 		"validate:sitemaps": "node scripts/validate-sitemaps.mjs && node scripts/audit-sitemap-deep.mjs",
 		"generate:i18n": "node scripts/generate-i18n-content.mjs",
+		"generate:guides": "node scripts/generate-external-guides.mjs",
+		"fetch:guide-images": "node scripts/fetch-guide-images.mjs",
 		"deploy": "npm run build && wrangler deploy",
 		"pages:deploy": "wrangler pages deploy dist --project-name=arkhacks",
 		"astro": "astro"

@@ -1,0 +1,9 @@
+---
+import GuidesHubPage from '../../components/GuidesHubPage.astro';
+import { getGuidesGroupedByGame } from '../../data/guides/helpers';
+import { nativeGuides } from '../../data/guides/native';
+
+const externalByGame = getGuidesGroupedByGame();
+---
+
+<GuidesHubPage nativeGuidesList={nativeGuides} externalByGame={externalByGame} />

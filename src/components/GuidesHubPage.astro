@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { siteConfig } from '../data/site';
+import { guidesBasePath, absoluteGuideUrl } from '../data/guides/helpers';
+import { nativeGuides } from '../data/guides/native';
+import type { ResolvedGuidePost } from '../data/guides/types';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale } from '../data/i18n/locales';
+
+interface Props {
+	nativeGuidesList?: typeof nativeGuides;
+	externalByGame?: { gameName: string; guides: ResolvedGuidePost[] }[];
+}
+
+const { nativeGuidesList = nativeGuides, externalByGame = [] } = Astro.props;
+const homeHref = getLocalizedPath('home', defaultLocale);
+const canonicalPath = guidesBasePath;
+const canonicalURL = absoluteGuideUrl();
+
+const itemListSchema = {
+	'@type': 'CollectionPage',
+	'@id': `${canonicalURL}#collection`,
+	name: 'Game Guides',
+	description:
+		'ARK ASCENDED HACKS native setup guides plus dedicated game-specific guides for popular titles — ESP, aimbot, meta tips, and competitive improvement.',
+	url: canonicalURL,
+	inLanguage: 'en',
+	isPartOf: { '@id': `${siteConfig.url}/#website` },
+	mainEntity: {
+		'@type': 'ItemList',
+		itemListElement: [
+			...nativeGuidesList.map((g, i) => ({
+				'@type': 'ListItem',
+				position: i + 1,
+				url: new URL(g.href, siteConfig.url).href,
+				name: g.title,
+			})),
+			...externalByGame.flatMap(({ guides }, gi) =>
+				guides.map((g, i) => ({
+					'@type': 'ListItem',
+					position: nativeGuidesList.length + gi * 100 + i + 1,
+					url: absoluteGuideUrl(g.slug),
+					name: g.title,
+				})),
+			),
+		],
+	},
+};
+---
+
+<Layout
+	title="Game Guides | ARK ASCENDED HACKS"
+	description="ARK ASCENDED HACKS native guides for ESP, aimbot, and setup — plus dedicated game-specific guides organized by title."
+	canonicalPath={canonicalPath}
+	locale="en"
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt="Game guides hub"
+	breadcrumbs={[{ label: 'Home', href: homeHref }, { label: 'Guides' }]}
+	extraGraph={[itemListSchema]}
+>
+	<Navbar locale="en" />
+	<main class="guides">
+		<div class="shell">
+			<header class="guides__hero">
+				<p class="guides__eyebrow">Guides</p>
+				<h1>Game Guides Hub</h1>
+				<p class="guides__intro">
+					Start with our native ARK ASCENDED HACKS product guides, then browse dedicated game-specific guides below.
+				</p>
+			</header>
+
+			<section class="guides__section guides__section--native" aria-labelledby="native-guides-heading">
+				<h2 id="native-guides-heading" class="guides__section-title">ARK ASCENDED HACKS Guides</h2>
+				<p class="guides__section-desc">Setup, features, pricing, and product documentation for ARK: Survival Ascended.</p>
+				<div class="guides__grid guides__grid--native">
+					{
+						nativeGuidesList.map((guide, index) => (
+							<a class="guides__card guides__card--native" href={guide.href}>
+								<img
+									src={guide.imageSrc}
+									alt={guide.imageAlt}
+									width="480"
+									height="270"
+									loading={index < 2 ? 'eager' : 'lazy'}
+									decoding="async"
+								/>
+								<div class="guides__card-body">
+									<span class="guides__cat">ARK ASCENDED HACKS</span>
+									<h3>{guide.title}</h3>
+									<p>{guide.description}</p>
+								</div>
+							</a>
+						))
+					}
+				</div>
+			</section>
+
+			<section class="guides__section guides__section--external" aria-labelledby="external-guides-heading">
+				<h2 id="external-guides-heading" class="guides__section-title">Game-Specific Guides</h2>
+				<p class="guides__section-desc">Dedicated guides organized by game title.</p>
+				{
+					externalByGame.map(({ gameName, guides }) => (
+						<div class="guides__game-group">
+							<h3 class="guides__game-name">{gameName}</h3>
+							<div class="guides__grid">
+								{guides.map((guide) => (
+									<article class="guides__card">
+										<a href={guide.canonicalPath}>
+											<img
+												src={guide.imageSrc}
+												alt={guide.imageAlt}
+												width="480"
+												height="270"
+												loading="lazy"
+												decoding="async"
+											/>
+											<span class="guides__cat">{guide.category}</span>
+											<h4>{guide.title}</h4>
+											<p>{guide.intro}</p>
+											<span class="guides__meta">Updated {guide.updated}</span>
+										</a>
+									</article>
+								))}
+							</div>
+						</div>
+					))
+				}
+			</section>
+		</div>
+	</main>
+	<SiteFooter locale="en" />
+</Layout>
+
+<style>
+	.guides {
+		padding: 2.5rem 0 4rem;
+	}
+
+	.guides__hero {
+		margin-bottom: 2.5rem;
+	}
+
+	.guides__eyebrow {
+		margin: 0 0 0.5rem;
+		color: var(--magenta-soft);
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+	}
+
+	.guides__hero h1 {
+		margin: 0 0 0.75rem;
+		font-size: clamp(2.2rem, 5vw, 3.4rem);
+		line-height: 1.05;
+	}
+
+	.guides__intro {
+		max-width: 42rem;
+		color: rgba(255, 255, 255, 0.72);
+		font-size: 1.05rem;
+		margin: 0;
+	}
+
+	.guides__section {
+		margin-bottom: 3rem;
+	}
+
+	.guides__section--native {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.guides__section-title {
+		margin: 0 0 0.35rem;
+		font-size: 1.5rem;
+	}
+
+	.guides__section-desc {
+		margin: 0 0 1.5rem;
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 0.95rem;
+	}
+
+	.guides__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+		gap: 1.25rem;
+	}
+
+	.guides__grid--native {
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+	}
+
+	.guides__game-group {
+		margin-bottom: 2.5rem;
+	}
+
+	.guides__game-name {
+		margin: 0 0 1rem;
+		font-size: 1.15rem;
+		color: var(--magenta-soft);
+		font-weight: 700;
+	}
+
+	.guides__card a,
+	.guides__card--native {
+		display: block;
+		height: 100%;
+		padding: 0.85rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+		text-decoration: none;
+		color: inherit;
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.guides__card--native:hover,
+	.guides__card a:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		transform: translateY(-2px);
+	}
+
+	.guides__card img,
+	.guides__card--native img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		margin-bottom: 0.75rem;
+	}
+
+	.guides__card h4,
+	.guides__card--native h3 {
+		margin: 0.35rem 0 0.5rem;
+		font-size: 1.05rem;
+		line-height: 1.25;
+	}
+
+	.guides__card p,
+	.guides__card--native p {
+		margin: 0;
+		color: rgba(255, 255, 255, 0.68);
+		font-size: 0.92rem;
+		line-height: 1.5;
+	}
+
+	.guides__cat {
+		display: inline-block;
+		color: var(--magenta-soft);
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+
+	.guides__meta {
+		display: inline-block;
+		margin-top: 0.75rem;
+		color: rgba(255, 255, 255, 0.55);
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+
+	@media (max-width: 760px) {
+		.guides__grid,
+		.guides__grid--native {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

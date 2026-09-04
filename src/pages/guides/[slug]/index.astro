@@ -1,0 +1,13 @@
+---
+import GuidePostPage from '../../../components/GuidePostPage.astro';
+import { getAllGuideStaticPaths, getGuideBySlug } from '../../../data/guides/helpers';
+
+export function getStaticPaths() {
+	return getAllGuideStaticPaths();
+}
+
+const { post } = Astro.props;
+const live = getGuideBySlug(post.slug) ?? post;
+---
+
+<GuidePostPage post={live} />

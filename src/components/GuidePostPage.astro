@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { absoluteGuideUrl, guidesBasePath } from '../data/guides/helpers';
+import type { ResolvedGuidePost } from '../data/guides/types';
+import { siteConfig } from '../data/site';
+import { getLocalizedPath } from '../data/i18n/routing';
+
+interface Props {
+	post: ResolvedGuidePost;
+}
+
+const { post } = Astro.props;
+const homeHref = getLocalizedPath('home', 'en');
+const guidesHref = guidesBasePath;
+
+const articleUrl = absoluteGuideUrl(post.slug);
+const articleSchema = {
+	'@type': 'Article',
+	'@id': `${articleUrl}#article`,
+	url: articleUrl,
+	headline: post.title,
+	description: post.metaDescription,
+	datePublished: post.published,
+	dateModified: post.updated,
+	image: new URL(post.imageSrc, siteConfig.url).href,
+	inLanguage: 'en',
+	author: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
+	publisher: {
+		'@type': 'Organization',
+		name: siteConfig.name,
+		url: siteConfig.url,
+		logo: { '@type': 'ImageObject', url: new URL(siteConfig.logoRaster, siteConfig.url).href },
+	},
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': `${articleUrl}#webpage`,
+	},
+	isPartOf: { '@id': `${siteConfig.url}/#website` },
+	keywords: post.keywords.join(', '),
+	articleSection: post.category,
+};
+
+function pageTitle(headline: string): string {
+	const suffix = ' | Guides';
+	if (headline.length + suffix.length <= 60) return `${headline}${suffix}`;
+	const trimmed = headline.slice(0, 57);
+	const cut = trimmed.lastIndexOf(' ');
+	return `${(cut > 40 ? trimmed.slice(0, cut) : trimmed).replace(/[|:–—-]+$/, '').trim()}…`;
+}
+---
+
+<Layout
+	title={pageTitle(post.title)}
+	description={post.metaDescription}
+	canonicalPath={post.canonicalPath}
+	ogImage={post.imageSrc}
+	ogImageAlt={post.imageAlt}
+	type="article"
+	locale="en"
+	breadcrumbs={[
+		{ label: 'Home', href: homeHref },
+		{ label: 'Guides', href: guidesHref },
+		{ label: post.h1 },
+	]}
+	extraGraph={[articleSchema]}
+>
+	<Navbar locale="en" />
+	<main class="guide-post">
+		<div class="shell">
+			<div class="shell-content guide-post__inner">
+				<article>
+					<header class="guide-post__header">
+						<p class="guide-post__cat">{post.category}</p>
+						<h1>{post.h1}</h1>
+						<p class="guide-post__intro">{post.intro}</p>
+						<p class="guide-post__meta">
+							Published {post.published} · Updated {post.updated}
+						</p>
+					</header>
+					<img
+						class="guide-post__hero"
+						src={post.imageSrc}
+						alt={post.imageAlt}
+						width="1200"
+						height="675"
+						loading="eager"
+						decoding="async"
+					/>
+					{
+						post.sections.map((section) => (
+							<section class="guide-post__section">
+								<h2>{section.h2}</h2>
+								{section.paragraphs.map((paragraph) => (
+									<p set:html={paragraph} />
+								))}
+							</section>
+						))
+					}
+				</article>
+			</div>
+		</div>
+	</main>
+	<SiteFooter locale="en" />
+</Layout>
+
+<style>
+	.guide-post {
+		padding: 2.5rem 0 4rem;
+	}
+
+	.guide-post__cat {
+		margin: 0 0 0.5rem;
+		color: var(--magenta-soft);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.guide-post__header h1 {
+		margin: 0 0 0.75rem;
+		font-size: clamp(1.9rem, 4vw, 2.8rem);
+		line-height: 1.1;
+	}
+
+	.guide-post__intro {
+		color: rgba(255, 255, 255, 0.78);
+		font-size: 1.08rem;
+	}
+
+	.guide-post__meta {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.85rem;
+	}
+
+	.guide-post__hero {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		margin: 1.5rem 0 2rem;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.guide-post__section {
+		margin-bottom: 1.75rem;
+	}
+
+	.guide-post__section h2 {
+		margin: 0 0 0.75rem;
+		font-size: 1.35rem;
+	}
+
+	.guide-post__section p {
+		margin: 0 0 0.9rem;
+		color: rgba(255, 255, 255, 0.78);
+		line-height: 1.7;
+	}
+
+	.guide-post__section a {
+		color: var(--magenta-soft);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+</style>

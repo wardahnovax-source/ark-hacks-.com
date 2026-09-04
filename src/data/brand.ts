@@ -5,7 +5,7 @@
  */
 export const brand = {
 	/** Public brand name (nav, footer, H1 hero, schema Organization) */
-	name: 'ARK Hacks',
+	name: 'ARK ASCENDED HACKS',
 	/** Short product label if needed */
 	shortName: 'ARK',
 	/** Canonical origin — no trailing slash */
@@ -24,7 +24,7 @@ export const brand = {
 	logoRaster: '/images/ark-hacks-logo.png',
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
-	logoAlt: 'ARK Hacks logo',
+	logoAlt: 'ARK ASCENDED HACKS logo',
 	defaultOgImage: '/images/ark-hacks-hero-3840w.webp',
 	heroImage: '/images/ark-hacks-hero-3840w.webp',
 
@@ -74,7 +74,7 @@ export const brand = {
 	},
 
 	seo: {
-		homeTitle: 'ARK Hacks | Undetected ARK Ascended Cheats PC',
+		homeTitle: 'ARK ASCENDED HACKS | Undetected ARK Ascended Cheats PC',
 		homeDescription:
 			'ARK ascended hacks for Windows PC — aimbot, player ESP, dino ESP, loot ESP, and EAC maintenance. Compare plans and buy ARK hacks with instant delivery.',
 		featuresTitle: '{game} Features | {brand}',
@@ -168,7 +168,7 @@ export const brand = {
 			},
 			{
 				src: '/images/ark-hacks-raid.webp',
-				title: 'ARK Hacks license plans',
+				title: 'ARK ASCENDED HACKS license plans',
 				caption: 'Monthly and lifetime ARK ascended hacks for Windows PC',
 			},
 		],
