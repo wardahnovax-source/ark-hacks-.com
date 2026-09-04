@@ -25,8 +25,8 @@ export const brand = {
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
 	logoAlt: 'ARK Hacks logo',
-	defaultOgImage: '/images/ark-hacks-hero-1024w.webp',
-	heroImage: '/images/ark-hacks-hero-1024w.webp',
+	defaultOgImage: '/images/ark-hacks-hero-1920w.webp',
+	heroImage: '/images/ark-hacks-hero-1920w.webp',
 
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },

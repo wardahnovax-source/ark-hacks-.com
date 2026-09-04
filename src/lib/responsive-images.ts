@@ -38,28 +38,32 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 }
 
 /**
- * Homepage / banner hero — compressed WebP ladder (not the 375KB+ PNG master).
- * Native art ~1024×409 (~2.5:1).
+ * Homepage / banner hero — 4K master with responsive WebP ladder.
+ * Native art 3840×1365 (~2.81:1).
  */
 export const heroResponsive: ResponsiveWidth[] = [
 	{ src: '/images/ark-hacks-hero-640w.webp', width: 640 },
 	{ src: '/images/ark-hacks-hero-1024w.webp', width: 1024 },
+	{ src: '/images/ark-hacks-hero-1536w.webp', width: 1536 },
+	{ src: '/images/ark-hacks-hero-1920w.webp', width: 1920 },
+	{ src: '/images/ark-hacks-hero-2560w.webp', width: 2560 },
+	{ src: '/images/ark-hacks-hero-3840w.webp', width: 3840 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 
-/** Default LCP src — mid ladder WebP (~56KB). */
-export const heroSrc = '/images/ark-hacks-hero-1024w.webp';
+/** Default LCP src — 1920w sharp desktop balance. */
+export const heroSrc = '/images/ark-hacks-hero-1920w.webp';
 export const heroSrcSet = buildSrcSet(heroResponsive);
 export const heroSizes = '100vw';
 
-/** LCP preload — same compressed WebP. */
-export const heroPreloadSrc = heroSrc;
+/** LCP preload — 1920w WebP for fast high-quality paint. */
+export const heroPreloadSrc = '/images/ark-hacks-hero-1920w.webp';
 export const heroMimeType = 'image/webp';
 
-/** Exact native dimensions (no zoom crop). */
-export const heroWidth = 1024;
-export const heroHeight = 364;
+/** Native 4K dimensions for aspect ratio / layout stability. */
+export const heroWidth = 3840;
+export const heroHeight = 1365;
 
 /** Responsive widths for below-fold content images. */
 export const contentWidths = [480, 960] as const;
