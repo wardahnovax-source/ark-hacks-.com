@@ -1,0 +1,175 @@
+---
+import HomeAboutApp from './react/HomeAbout';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+
+interface Props {
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+---
+
+<HomeAboutApp client:visible locale={locale} />
+
+<style is:global>
+	.home-about {
+		padding-block: clamp(2.25rem, 4.5vw, 3rem);
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.home-about__head {
+		margin-bottom: 1.5rem;
+		max-width: 44rem;
+	}
+
+	.home-about__eyebrow {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin: 0 0 0.55rem;
+		padding: 0.28rem 0.65rem;
+		border-radius: 999px;
+		border: 1px solid color-mix(in srgb, var(--magenta) 35%, transparent);
+		background: color-mix(in srgb, var(--magenta) 10%, transparent);
+		font-size: 0.6875rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.home-about__head h2 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.12;
+		background: linear-gradient(120deg, #f5f5f7 0%, var(--magenta-soft) 55%, #22d3ee 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.home-about__lede {
+		margin: 0;
+		max-width: 40rem;
+		font-size: 0.9375rem;
+		line-height: 1.7;
+		color: var(--ink-muted);
+	}
+
+	.home-about__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.home-about__card {
+		padding: 1.05rem 1rem 1.1rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background:
+			radial-gradient(ellipse 90% 70% at 0% 0%, color-mix(in srgb, var(--magenta) 8%, transparent), transparent 55%),
+			var(--bg-elevated);
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.home-about__card:hover {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+		transform: translateY(-2px);
+	}
+
+	.home-about__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.15rem;
+		height: 2.15rem;
+		margin-bottom: 0.7rem;
+		border-radius: 0.6rem;
+		background: color-mix(in srgb, var(--magenta) 16%, transparent);
+		color: var(--magenta-soft);
+	}
+
+	.home-about__icon svg {
+		width: 1.05rem;
+		height: 1.05rem;
+	}
+
+	.home-about__card h3 {
+		margin: 0 0 0.4rem;
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.home-about__card p {
+		margin: 0;
+		font-size: 0.8125rem;
+		line-height: 1.55;
+		color: var(--ink-muted);
+	}
+
+	.home-about__links {
+		padding: 1.1rem 1.15rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: color-mix(in srgb, var(--bg-panel) 85%, var(--bg-elevated));
+	}
+
+	.home-about__links-label {
+		margin: 0 0 0.75rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--ink);
+	}
+
+	.home-about__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.home-about__pills a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem 0.95rem;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		background: var(--bg);
+		color: var(--magenta-soft);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition:
+			background 0.15s ease,
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+
+	.home-about__pills a:hover {
+		background: color-mix(in srgb, var(--magenta) 14%, transparent);
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+		color: var(--ink);
+	}
+
+	@media (max-width: 900px) {
+		.home-about__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 480px) {
+		.home-about__grid {
+			grid-template-columns: 1fr;
+		}
+
+		.home-about__links {
+			padding: 1rem;
+		}
+	}
+</style>
