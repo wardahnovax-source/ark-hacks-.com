@@ -51,6 +51,8 @@ const gallery = arkImages.product.slice(0, 3).map((img) => ({
 	alt: img.alt,
 }));
 
+const bannerHeroPages = new Set<PageId>(['features', 'pricing']);
+const bannerHeroImage = bannerHeroPages.has(pageId) ? arkImages.hero : crawl.src;
 const pageUrl = new URL(getLocalizedPath(pageId, locale), siteConfig.url).href;
 const priceValidUntil = '2027-12-31';
 
@@ -140,7 +142,7 @@ const eyebrowByPage: Partial<Record<PageId, string>> = {
 	intro={intro}
 	introEdit={introEdit}
 	eyebrow={eyebrowByPage[pageId]}
-	heroImage={crawl.src}
+	heroImage={bannerHeroImage}
 	heroAlt={page.imageAlt || crawl.caption}
 	gallery={gallery}
 	galleryTitle={galleryTitle}

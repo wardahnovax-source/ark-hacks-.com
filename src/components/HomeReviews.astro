@@ -3,6 +3,7 @@ import HomeReviewsApp from './react/HomeReviews';
 import { customerReviews, customerReviewStats } from '../data/site';
 import { getReviewPath, reviewsBasePath } from '../data/reviews';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { heroPreloadSrc, heroSrcSet, heroSizes, heroWidth, heroHeight } from '../lib/responsive-images';
 
 interface Props {
 	locale?: LocaleCode;
@@ -20,20 +21,68 @@ const reviews = customerReviews.map((review) => ({
 }));
 ---
 
-<HomeReviewsApp
-	client:visible
-	locale={locale}
-	reviews={reviews}
-	averageRating={customerReviewStats.averageRating}
-	totalCount={customerReviewStats.totalCount}
-	reviewsBasePath={reviewsBasePath}
-/>
+<section class="reviews-section">
+	<div class="reviews-section__media" aria-hidden="true">
+		<img
+			src={heroPreloadSrc}
+			srcset={heroSrcSet}
+			sizes={heroSizes}
+			alt=""
+			width={heroWidth}
+			height={heroHeight}
+			loading="lazy"
+			decoding="async"
+		/>
+		<div class="reviews-section__scrim"></div>
+	</div>
+	<HomeReviewsApp
+		client:visible
+		locale={locale}
+		reviews={reviews}
+		averageRating={customerReviewStats.averageRating}
+		totalCount={customerReviewStats.totalCount}
+		reviewsBasePath={reviewsBasePath}
+	/>
+</section>
 
 <style is:global>
-	.reviews {
-		padding-block: clamp(3rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.5rem);
-		background: var(--bg);
+	.reviews-section {
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
 		border-top: 1px solid var(--line-soft);
+	}
+
+	.reviews-section__media {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	.reviews-section__media img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 55% 42%;
+	}
+
+	.reviews-section__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(8, 9, 10, 0.88) 0%,
+			rgba(8, 9, 10, 0.94) 45%,
+			rgba(8, 9, 10, 0.98) 100%
+		);
+	}
+
+	.reviews {
+		position: relative;
+		z-index: 1;
+		padding-block: clamp(3rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.5rem);
+		background: transparent;
 		overflow: hidden;
 	}
 

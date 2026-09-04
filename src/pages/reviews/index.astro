@@ -1,14 +1,10 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import SiteFooter from '../../components/SiteFooter.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 import { customerReviewStats, customerReviews, fillBrandTokens, productInfo, siteConfig } from '../../data/site';
 import { brandCopy, brandSeo, seoPageTitle } from '../../data/site-core';
 import { seoDescription } from '../../data/brand';
-import { getSelfHreflangAlternates } from '../../data/i18n/routing';
 import { getReviewPath, reviewsBasePath } from '../../data/reviews';
-import { defaultCrawlImageSrc } from '../../data/page-images';
-import { contentSrcSet, productMainSizes } from '../../lib/responsive-images';
+import { arkImages } from '../../data/ark';
 
 const title = seoPageTitle(brandSeo.reviewsTitle);
 const description = seoDescription(brandSeo.reviewsDescription);
@@ -32,7 +28,6 @@ function formatDate(isoDate: string): string {
 const sortedReviews = [...customerReviews].sort((a, b) => (a.date < b.date ? 1 : -1));
 
 const canonicalURL = new URL(reviewsBasePath, siteConfig.url).href;
-const hreflangAlternates = getSelfHreflangAlternates(reviewsBasePath);
 
 const extraGraph: Record<string, unknown>[] = [
 	{
@@ -50,184 +45,79 @@ const extraGraph: Record<string, unknown>[] = [
 ];
 ---
 
-<Layout
+<PageLayout
 	title={title}
 	description={description}
 	canonicalPath={reviewsBasePath}
-	hreflangAlternates={hreflangAlternates}
-	ogImage={defaultCrawlImageSrc}
-	ogImageAlt={fillBrandTokens('{brand} customer reviews')}
+	heading={`${siteConfig.name} reviews`}
+	intro={reviewsIntro}
+	introEdit="reviewsIntro"
+	eyebrow="Reviews"
+	heroImage={arkImages.hero}
+	heroAlt={fillBrandTokens('{brand} customer reviews')}
+	showGallery={false}
 	locale="en"
-	breadcrumbs={[
-		{ label: 'Home', href: '/' },
-		{ label: 'Reviews' },
-	]}
 	extraGraph={extraGraph}
+	ctaPrimary={{ href: siteConfig.checkoutUrl, label: `Buy Now — $${productInfo.plans[0].price}`, edit: 'ctaBuy' }}
+	ctaSecondary={{ href: '/pricing/', label: 'Compare pricing' }}
 >
-	<Navbar />
-	<main class="reviews-index">
-		<div class="shell reviews-index__wrap">
-			<nav class="reviews-index__crumbs" aria-label="Breadcrumb">
-				<a href="/">Home</a>
-				<span aria-hidden="true">/</span>
-				<span aria-current="page">Reviews</span>
-			</nav>
+	<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
+		<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
+		<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
+		<p class="reviews-index__count">{customerReviewStats.totalCount} reviews · out of 5</p>
+	</div>
 
-			<figure class="reviews-index__media">
-				<img
-					src={defaultCrawlImageSrc}
-					srcset={contentSrcSet(defaultCrawlImageSrc)}
-					sizes={productMainSizes}
-					alt={fillBrandTokens('{brand} customer reviews')}
-					width="1280"
-					height="720"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
-			</figure>
-
-			<header class="reviews-index__head">
-				<div>
-					<h1 data-edit="navReviews">{siteConfig.name} reviews</h1>
-					<p class="reviews-index__intro" data-edit="reviewsIntro">{reviewsIntro}</p>
-				</div>
-				<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
-					<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
-					<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
-					<p class="reviews-index__count">{customerReviewStats.totalCount} reviews · out of 5</p>
-				</div>
-			</header>
-
-			<div class="reviews-index__grid">
-				{
-					sortedReviews.map((review) => (
-						<article class="reviews-index__card">
-							<div class="reviews-index__card-top">
-								<div class="reviews-index__who">
-									<span class="reviews-index__avatar" aria-hidden="true">{review.handle.charAt(0).toUpperCase()}</span>
-									<div>
-										<p class="reviews-index__handle">@{review.handle}</p>
-										<p class="reviews-index__date"><time datetime={review.date}>{formatDate(review.date)}</time></p>
-									</div>
-								</div>
-								<p class="reviews-index__stars" aria-label={`${review.rating} out of 5 stars`}>
-									{stars(review.rating)}
+	<div class="reviews-index__grid">
+		{
+			sortedReviews.map((review) => (
+				<article class="reviews-index__card">
+					<div class="reviews-index__card-top">
+						<div class="reviews-index__who">
+							<span class="reviews-index__avatar" aria-hidden="true">{review.handle.charAt(0).toUpperCase()}</span>
+							<div>
+								<p class="reviews-index__handle">@{review.handle}</p>
+								<p class="reviews-index__date">
+									<time datetime={review.date}>{formatDate(review.date)}</time>
 								</p>
 							</div>
-							{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
-							<p class="reviews-index__text">{review.text}</p>
-							<a class="reviews-index__more" href={getReviewPath(review.slug)}>
-								Read full review
-								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-									<path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</a>
-						</article>
-					))
-				}
-			</div>
-
-			<section class="reviews-index__cta" aria-label={`Buy ${siteConfig.name}`}>
-				<h2>Ready to try {siteConfig.name}?</h2>
-				<p>
-					ESP, soft aim, and radar in one package for Windows PC — with {productInfo.game} patch
-					maintenance after updates.
-				</p>
-				<div class="reviews-index__cta-row">
-					<a href={siteConfig.checkoutUrl} class="reviews-index__buy" rel="noopener noreferrer">
-						Buy Now — ${productInfo.plans[0].price}
+						</div>
+						<p class="reviews-index__stars" aria-label={`${review.rating} out of 5 stars`}>
+							{stars(review.rating)}
+						</p>
+					</div>
+					{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
+					<p class="reviews-index__text">{review.text}</p>
+					<a class="reviews-index__more" href={getReviewPath(review.slug)}>
+						Read full review
+						<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path
+								d="M5 12h14m-6-6l6 6-6 6"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
 					</a>
-					<a href="/pricing/" class="reviews-index__link-btn">Compare pricing</a>
-				</div>
-			</section>
-		</div>
-	</main>
-	<SiteFooter />
-</Layout>
+				</article>
+			))
+		}
+	</div>
+</PageLayout>
 
 <style>
-	.reviews-index {
-		overflow-x: clip;
-		padding-block: 2rem 3rem;
-	}
-
-	.reviews-index__wrap {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.reviews-index__media {
-		margin: 0;
-		border-radius: var(--radius-md, 0.75rem);
-		overflow: hidden;
-		border: 1px solid var(--line-soft);
-		background: var(--bg-elevated);
-	}
-
-	.reviews-index__media img {
-		display: block;
-		width: 100%;
-		height: auto;
-		aspect-ratio: 16 / 9;
-		object-fit: cover;
-	}
-
-	.reviews-index__crumbs {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.45rem;
-		font-size: 0.8rem;
-		color: var(--ink-faint);
-	}
-
-	.reviews-index__crumbs a {
-		color: var(--ink-muted);
-		font-weight: 600;
-		text-decoration: none;
-	}
-
-	.reviews-index__crumbs a:hover {
-		color: var(--magenta-soft);
-	}
-
-	.reviews-index__head {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 1rem 1.5rem;
-		padding-bottom: 1.15rem;
-		border-bottom: 1px solid var(--line-soft);
-	}
-
-	.reviews-index__head h1 {
-		margin: 0;
-		font-family: var(--font-display);
-		font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-		font-weight: 800;
-		letter-spacing: -0.03em;
-		color: var(--ink);
-	}
-
-	.reviews-index__intro {
-		margin: 0.55rem 0 0;
-		color: var(--ink-muted);
-		font-size: 0.96rem;
-		line-height: 1.6;
-		max-width: 40rem;
-	}
-
 	.reviews-index__summary {
 		display: grid;
 		gap: 0.15rem;
-		justify-items: end;
-		text-align: right;
+		justify-items: start;
+		text-align: left;
+		margin-bottom: 1.35rem;
 		padding: 0.85rem 1.1rem;
 		border-radius: var(--radius-md, 0.75rem);
 		border: 1px solid var(--line);
 		background: var(--bg-panel);
+		width: fit-content;
+		max-width: 100%;
 	}
 
 	.reviews-index__avg {
@@ -365,102 +255,13 @@ const extraGraph: Record<string, unknown>[] = [
 		color: var(--ink);
 	}
 
-	.reviews-index__cta {
-		display: grid;
-		gap: 0.65rem;
-		padding: clamp(1.25rem, 3vw, 1.75rem);
-		border-radius: var(--radius-lg, 1rem);
-		border: 1px solid var(--line);
-		background:
-			radial-gradient(ellipse 70% 80% at 0% 0%, color-mix(in srgb, var(--magenta) 10%, transparent), transparent 55%),
-			var(--bg-panel);
-	}
-
-	.reviews-index__cta h2 {
-		margin: 0;
-		font-family: var(--font-display);
-		font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-		font-weight: 800;
-		color: var(--ink);
-	}
-
-	.reviews-index__cta p {
-		margin: 0;
-		color: var(--ink-muted);
-		line-height: 1.6;
-		max-width: 44rem;
-	}
-
-	.reviews-index__cta-row {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.65rem;
-		margin-top: 0.35rem;
-	}
-
-	.reviews-index__buy {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.8rem 1.35rem;
-		border-radius: 0.75rem;
-		background: var(--magenta);
-		color: #fff;
-		font-size: 0.95rem;
-		font-weight: 700;
-		text-decoration: none;
-		transition:
-			transform 0.2s ease,
-			background 0.2s ease;
-	}
-
-	.reviews-index__buy:hover {
-		transform: translateY(-1px);
-		background: var(--accent-hover);
-		color: #fff;
-	}
-
-	.reviews-index__link-btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.8rem 1.1rem;
-		border-radius: 0.75rem;
-		border: 1px solid var(--line-strong);
-		background: var(--bg-elevated);
-		color: var(--ink);
-		font-size: 0.9rem;
-		font-weight: 700;
-		text-decoration: none;
-		transition:
-			border-color 0.2s ease,
-			color 0.2s ease;
-	}
-
-	.reviews-index__link-btn:hover {
-		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line-strong));
-		color: var(--magenta-soft);
-	}
-
 	@media (max-width: 680px) {
 		.reviews-index__grid {
 			grid-template-columns: 1fr;
 		}
 
 		.reviews-index__summary {
-			justify-items: start;
-			text-align: left;
 			width: 100%;
-		}
-
-		.reviews-index__cta-row {
-			flex-direction: column;
-		}
-
-		.reviews-index__buy,
-		.reviews-index__link-btn {
-			width: 100%;
-			min-height: var(--touch-min, 2.75rem);
 		}
 	}
 </style>
