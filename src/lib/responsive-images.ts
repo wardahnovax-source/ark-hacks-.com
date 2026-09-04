@@ -52,18 +52,19 @@ export const heroResponsive: ResponsiveWidth[] = [
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 
-/** Default LCP src — 1920w sharp desktop balance. */
-export const heroSrc = '/images/ark-hacks-hero-1920w.webp';
+/** Default LCP src — 3840w for crisp retina hero on desktop. */
+export const heroSrc = '/images/ark-hacks-hero-3840w.webp';
 export const heroSrcSet = buildSrcSet(heroResponsive);
-export const heroSizes = '100vw';
+/** Prefer native 4K on large/retina screens. */
+export const heroSizes = '(max-width: 640px) 100vw, (max-width: 1920px) 100vw, 3840px';
 
-/** LCP preload — 1920w WebP for fast high-quality paint. */
-export const heroPreloadSrc = '/images/ark-hacks-hero-1920w.webp';
+/** LCP preload — 3840w WebP for maximum hero sharpness. */
+export const heroPreloadSrc = '/images/ark-hacks-hero-3840w.webp';
 export const heroMimeType = 'image/webp';
 
 /** Native 4K dimensions for aspect ratio / layout stability. */
 export const heroWidth = 3840;
-export const heroHeight = 1365;
+export const heroHeight = 1240;
 
 /** Responsive widths for below-fold content images. */
 export const contentWidths = [480, 960] as const;
