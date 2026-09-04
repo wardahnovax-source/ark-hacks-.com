@@ -1,49 +1,20 @@
 /**
- * Cloudflare Worker — host canonicalization before static assets.
- * Canonical site: https://arkhacks.com (matches brand.url)
- *
- * Requires DNS: CNAME `www` → `arkhacks.com` (proxied) AND
- * Workers custom domain `www.arkhacks.com` attached — otherwise
- * www is NXDOMAIN and Seobility fails the www/non-www check.
+ * Cloudflare Worker entry — runs middleware (redirects, security headers)
+ * then serves static assets from the Astro build.
  */
+import { onRequest } from '../functions/_middleware.js';
+
 export interface Env {
 	ASSETS: Fetcher;
 }
 
-const CANONICAL_HOST = 'arkhacks.com';
-
-/** Old apex still 301 → current canonical. */
-const LEGACY_HOSTS = new Set(['arkhacks.com', 'www.arkhacks.com']);
-
-function canonicalUrl(request: Request): URL | null {
-	const url = new URL(request.url);
-	const host = (request.headers.get('host') || url.hostname).split(':')[0].toLowerCase();
-	let changed = false;
-
-	if (url.protocol === 'http:') {
-		url.protocol = 'https:';
-		changed = true;
-	}
-
-	if (
-		host === `www.${CANONICAL_HOST}` ||
-		url.hostname === `www.${CANONICAL_HOST}` ||
-		LEGACY_HOSTS.has(host)
-	) {
-		url.hostname = CANONICAL_HOST;
-		changed = true;
-	}
-
-	return changed ? url : null;
-}
-
 export default {
-	async fetch(request: Request, env: Env): Promise<Response> {
-		const target = canonicalUrl(request);
-		if (target) {
-			return Response.redirect(target.toString(), 301);
-		}
-
-		return env.ASSETS.fetch(request);
+	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+		return onRequest({
+			request,
+			env,
+			ctx,
+			next: () => env.ASSETS.fetch(request),
+		});
 	},
 };

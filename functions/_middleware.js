@@ -4,10 +4,8 @@ const CANONICAL_ORIGIN = 'https://arkhacks.com';
 const APEX_HOST = 'arkhacks.com';
 const WWW_HOST = 'www.arkhacks.com';
 
-/** Legacy domains → canonical apex (301). */
+/** Legacy domains → canonical apex (301). Does not include current apex/www. */
 const LEGACY_HOSTS = new Set([
-	'arkhacks.com',
-	'www.arkhacks.com',
 	'fortnitehack.net',
 	'www.fortnitehack.net',
 	'fortnitecheats.xyz',
